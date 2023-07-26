@@ -8,7 +8,7 @@ canonical_url: null
 id: 1048731
 date: '2022-04-17T10:12:40Z'
 italian_version: maxiviani
-date: '2023-07-24'
+translate_date: '2023-07-24'
 ---
 
 ## Introduzione - Giorno 1
