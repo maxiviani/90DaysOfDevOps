@@ -33,7 +33,7 @@ Un'altra risorsa che condivido in questo momento e che penso dovresti esaminare 
 
 [DevOps Roadmap](https://roadmap.sh/devops)
 
-Ho trovato questa risorsa molto utile quando stavo creando la mia lista iniziale e il post del blog su questo argomento Vedrai che copre altre aree, in modo molto dettagliato, al di fuori dei 12 argomenti che ho elencato qui in questo repository.
+Ho trovato questa risorsa molto utile quando stavo creando la mia lista iniziale e il post del blog su questo argomento. Vedrai che copre altre aree, in modo molto dettagliato, al di fuori dei 12 argomenti che ho elencato qui in questo repository.
 
 ## Primi Passi - Cos'è DevOps?
 
@@ -41,7 +41,7 @@ Ci sono così tanti articoli di blog e video di YouTube da elencare qui, ma poic
 
 Innanzitutto, DevOps non è uno strumento. Non puoi acquistarlo, non è un prodotto software o un repository GitHub open source che puoi scaricare. Non è nemmeno un linguaggio di programmazione, né una qualche sorta di magia oscura.
 
-DevOps è un modo per fare cose più intelligenti nello sviluppo software. - Aspetta un attimo... Ma se non sono uno sviluppatore di software, dovrei smettere subito e abbandonare questo progetto??? No. Per niente. Resta... Perché DevOps unisce lo sviluppo software e la gestione dell'ifrastruttura. Ho detto prima che ero più orientato verso le Virtual Machines, che rientrano generalmente nell'ambito della gestione delle tnfrastrutture, ma nella comunità ci sono persone con diversi background che sicuramente trarrano beneficio da DevOps individualmente: lo sviluppatore, il tecnico dell'ifrastruttura e l'ingegnere di controllo qualità possono tutti imparare queste migliori pratiche e avere una migliore comprensione di DevOps.
+DevOps è un modo per fare cose più intelligenti nello sviluppo software. - Aspetta un attimo... Ma se non sono uno sviluppatore di software, dovrei smettere subito e abbandonare questo progetto??? No. Per niente. Resta... Perché DevOps unisce lo sviluppo software e la gestione dell'infrastruttura. Ho detto prima che ero più orientato verso le Virtual Machines, che rientrano generalmente nell'ambito della gestione delle infrastrutture, ma nella comunità ci sono persone con diversi background che sicuramente trarrano beneficio da DevOps individualmente: lo sviluppatore, il tecnico dell'infrastruttura e l'ingegnere di controllo qualità possono tutti imparare queste pratiche e avere una migliore comprensione di DevOps.
 
 DevOps è un insieme di pratiche che aiutano a raggiungere l'obiettivo di questa mentalità: ridurre il tempo tra la fase di ideazione di un prodotto e il suo rilascio in produzione, destinato all'utente finale o a chiunque altro abbia interesse come un team interno o un cliente.
 
