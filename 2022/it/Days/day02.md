@@ -27,7 +27,7 @@ Gli sviluppatori creeranno un'applicazione, che può essere realizzata con diver
 
 Come DevOps engineer, non programmerai l'applicazione, ma comprendere i concetti di come lavora uno sviluppatore, i sistemi, gli strumenti e i processi che utilizzano è fondamentale per il successo.
 
-A un livello molto generale, dovrai sapere come l'applicazione è configurata per comunicare con tutti i suoi servizi o servizi di dati necessari e come questi aspetti possono o dovrebbero essere testati.
+A un livello molto generale, dovrai sapere come l'applicazione è configurata per comunicare con tutti i suoi servizi o i servizi di dati necessari e come questi aspetti possono o dovrebbero essere testati.
 
 L'applicazione dovrà essere distribuita in qualche luogo, rimaniamo generici e diciamo che sarà su un server, non importa dove, ma su un server. Questo server sarà quindi utilizzato dal cliente o dall'utente finale, a seconda del tipo di applicazione creata.
 
