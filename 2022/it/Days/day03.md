@@ -7,7 +7,7 @@ cover_image: null
 canonical_url: null
 id: 1048825
 italin_version: maxiviani
-varsion_date: 27/07/2023
+varsion_date: 2023-07-27
 ---
 
 ## Ciclo di Vita DevOps - Focalizzato sull'Applicazione
