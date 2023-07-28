@@ -6,81 +6,82 @@ tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1048830
+italian_version: maxiviani
+version_date: 2023-07-28
 ---
 
-## Plan > Code > Build > Testing > Release > Deploy > Operate > Monitor >
+## Pianificazione > Codice > Build > Testing > Release > Deploy > Operativo > Monitoraggio >
 
-Today we are going to focus on the individual steps from start to finish and the continuous cycle of an Application in a DevOps world.
+Oggi ci concentreremo sugli step individuali dall'inizio alla fine e sul ciclo continuo di un'applicazione nel mondo del DevOps.
 
 ![DevOps](Images/Day5_DevOps8.png)
 
-### Plan
+### Pianificazione
 
-It all starts with the planning process this is where the development team gets together and figures out what types of features and bug fixes they're going to roll out in their next sprint. This is an opportunity as a DevOps Engineer for you to get involved with that and learn what kinds of things are going to be coming your way that you need to be involved with and also influence their decisions or their path and kind of help them work with the infrastructure that you've built or steer them towards something that's going to work better for them in case they're not on that path and so one key thing to point out here is the developers or software engineering team is your customer as a DevOps engineer so this is your opportunity to work with your customer before they go down a bad path.
+Tutto ha inizio con il processo di pianificazione, dove il team di sviluppo si riunisce e stabilisce quali funzionalità e correzioni di bug implementeranno nella prossima sprint. Questa è un'opportunità per te, in qualità di Ingegnere DevOps, per essere coinvolto e capire quali compiti ti riguarderanno e anche influenzare le loro decisioni o il loro percorso e aiutarli a lavorare con l'infrastruttura che hai costruito o indirizzarli verso qualcosa che funzionerà meglio nel caso in cui non siano sulla giusta strada. Un punto chiave da sottolineare è che i membri del team di sviluppo o dell'ingegneria del software sono i tuoi clienti in quanto Ingegnere DevOps, quindi questa è la tua opportunità per collaborare con loro prima che intraprendano una cattiva strada.
 
-### Code
+### Codice
 
-Now once that planning session's done they're going to go start writing the code you may or may not be involved a whole lot with this one of the places you may get involved with it, is whenever they're writing code you can help them better understand the infrastructure so if they know what services are available and how to best talk with those services so they're going to do that and then once they're done they'll merge that code into the repository
+Una volta conclusa la sessione di pianificazione, inizieranno a scrivere il codice. Potresti essere coinvolto o meno in questa fase, ma uno dei luoghi in cui potresti esserlo è quando scrivono il codice. Puoi aiutarli a comprendere meglio l'infrastruttura, in modo che sappiano quali servizi sono disponibili e come interagire al meglio con tali servizi. Una volta terminato, uniranno il codice al repository.
 
 ### Build
 
-This is where we'll kick off the first of our automation processes because we're going to take their code and we're going to build it depending on what language they're using it may be transpiring it or compiling it or it might be creating a docker image from that code either way we're going to go through that process using our ci cd pipeline
+Qui avvieremo il primo dei nostri processi di automazione, poiché prenderemo il loro codice e lo compileremo a seconda del linguaggio utilizzato. Potrebbe essere trascritto o compilato, oppure potrebbe essere creato un'immagine Docker da quel codice. In ogni caso, attraverseremo questo processo utilizzando la nostra pipeline CI/CD.
 
 ## Testing
 
-Once we've built it we're going to run some tests on it now the development team usually writes the test you may have some input in what tests get written but we need to run those tests and the testing is a way for us to try and minimise introducing problems out into production, it doesn't guarantee that but we want to get as close to a guarantee as we can that were one not introducing new bugs and two not breaking things that used to work
+Una volta costruito, eseguiremo alcuni test. Di solito, il team di sviluppo scrive i test, ma potresti avere qualche input su quali test vengano scritti. Dobbiamo eseguire questi test perché è un modo per cercare di ridurre al minimo l'introduzione di problemi in produzione. Non garantisce che non ci saranno problemi, ma vogliamo avvicinarci il più possibile a una garanzia che non stiamo introducendo nuovi bug e che non stiamo rompendo ciò che funzionava in precedenza.
 
 ## Release
 
-Once those tests pass we're going to do the release process and depending again on what type of application you're working on this may be a non-step. You know the code may just live in the GitHub repo or the git repository or wherever it lives but it may be the process of taking your compiled code or the docker image that you've built and putting it into a registry or a repository where it's accessible by your production servers for the deployment process
+Una volta superati questi test, passeremo al processo di rilascio. A seconda del tipo di applicazione su cui stai lavorando, potrebbe essere una fase opzionale. Il codice potrebbe semplicemente risiedere nel repository GitHub o nel repository Git o in qualsiasi altro posto, ma potrebbe essere il processo di prendere il codice compilato o l'immagine Docker creata e inserirla in un registro o un repository accessibile dai tuoi server di produzione per il processo di distribuzione.
 
 ## Deploy
 
-which is the thing that we do next because deployment is like the end game of this whole thing because deployments are when we put the code into production and it's not until we do that that our business realizes the value from all the time effort and hard work that you and the software engineering team have put into this product up to this point.
+Questa è la fase successiva, poiché il deployment è come il culmine di tutto questo processo. Il deployment avviene quando mettiamo il codice in produzione e solo allora il nostro business realizza il valore di tutto il tempo, lo sforzo e il duro lavoro che tu e il team di ingegneria del software avete dedicato a questo prodotto fino a questo punto.
 
-## Operate
+## Operativo
 
-Once it's deployed we are going to operate it and operate it may involve something like you start getting calls from your customers that they're all annoyed that the site's running slow or their application is running slow right so you need to figure out why that is and then possibly build auto-scaling you know to handle increase the number of servers available during peak periods and decrease the number of servers during off-peak periods either way that's all operational type metrics, another operational thing that you do is include like a feedback loop from production back to your ops team letting you know about key events that happened in production such as a deployment back one step on the deployment thing this may or may not get automated depending on your environment the goal is to always automate it when possible there are some environments where you possibly need to do a few steps before you're ready to do that but ideally you want to deploy automatically as part of your automation process but if you're doing that it might be a good idea to include in your operational steps some type of notification so that your ops team knows that a deployment has happened
+Una volta che è stato distribuito, ci occuperemo delle operazioni. Questo potrebbe includere, ad esempio, ricevere chiamate dai clienti che si lamentano perché il sito è lento o perché l'applicazione sta funzionando lentamente. Quindi, dovrai capire il motivo di ciò e, eventualmente, costruire la scalabilità automatica per gestire un aumento del numero di server disponibili durante i periodi di picco e ridurre il numero di server durante i periodi di basso carico. In ogni caso, tutto ciò riguarda le metriche operative. Un'altra cosa operativa che farai è includere un feedback loop dalla produzione al tuo team di operazioni, per segnalarti gli eventi chiave avvenuti in produzione, come ad esempio un deployment. Riguardo alla fase di deployment, potrebbe essere automatizzata o meno a seconda del tuo ambiente. L'obiettivo è automatizzarla sempre quando possibile, ma ci potrebbero essere alcuni ambienti in cui è necessario eseguire alcune fasi prima di essere pronti per farlo. Tuttavia, l'ideale è effettuare il deployment automaticamente come parte del tuo processo di automazione, ma se lo fai, potrebbe essere una buona idea includere nelle tue fasi operative qualche tipo di notifica in modo che il tuo team di operazioni sappia che un deployment è avvenuto.
 
-## Monitor
+## Monitoraggio
 
-All of the above parts lead to the final step because you need to have monitoring, especially around operational issues auto-scaling troubleshooting like you don't know
-there's a problem if you don't have monitoring in place to tell you that there's a problem so some of the things you might build monitoring for are memory utilization CPU utilization disk space, API endpoint, response time, how quickly that endpoint is responding and a big part of that as well is logs. Logs give developers the ability to see what is happening without having to access production systems.
+Tutti i passaggi precedenti portano al passo finale, che è il monitoraggio. Soprattutto per le problematiche operative, il monitoraggio è essenziale. La scalabilità automatica, la risoluzione dei problemi, tutto ciò non sarebbe possibile senza un sistema di monitoraggio in grado di avvisarti in caso di problemi. Quindi, alcune delle cose per cui potresti costruire il monitoraggio riguardano l'utilizzo della memoria, l'utilizzo della CPU, lo spazio su disco, il tempo di risposta dell'endpoint API, la velocità con cui l'endpoint risponde. Inoltre, una parte importante di ciò riguarda i log. I log danno agli sviluppatori la possibilità di vedere cosa sta accadendo senza dover accedere direttamente ai sistemi di produzione.
 
-## Rinse & Repeat
+## Ripeti
 
-Once that's in place you go right back to the beginning to the planning stage and go through the whole thing again
+Una volta che tutto è in atto, torni al punto di partenza, alla fase di pianificazione, e ripeti tutto il processo.
 
-## Continuous
+## Continuo
 
-Many tools help us achieve the above continuous process, all this code and the ultimate goal of being completely automated, cloud infrastructure or any environment is often described as Continuous Integration/ Continuous Delivery/Continous Deployment or “CI/CD” for short. We will spend a whole week on CI/CD later on in the 90 Days with some examples and walkthroughs to grasp the fundamentals.
+Molti strumenti ci aiutano a raggiungere il processo continuo sopra descritto, tutto questo codice e l'obiettivo finale di essere completamente automatizzati, l'infrastruttura cloud o qualsiasi altro ambiente viene spesso descritto come Continuous Integration/Continuous Delivery/Continuous Deployment o "CI/CD" in breve. Dedicheremo un'intera settimana a CI/CD più avanti nei 90 giorni, con alcuni esempi e spiegazioni per comprendere i concetti fondamentali.
 
 ### Continuous Delivery
 
-Continuous Delivery = Plan > Code > Build > Test
+Continuous Delivery = Pianificazione > Codice > Build > Testing
 
 ### Continuous Integration
 
-This is effectively the outcome of the Continuous Delivery phases above plus the outcome of the Release phase. This is the case for both failure and success but this is fed back into continuous delivery or moved to Continuous Deployment.
+Questa è essenzialmente l'esito delle fasi di Continuous Delivery sopra descritte, oltre all'esito della fase di Release. Questo vale sia per il fallimento che per il successo, ma ciò viene restituito alla Continuous Delivery o spostato nella Continuous Deployment.
 
-Continuous Integration = Plan > Code > Build > Test > Release
+Continuous Integration = Pianificazione > Codice > Build > Testing > Release
 
 ### Continuous Deployment
 
-If you have a successful release from your continuous integration then move to Continuous Deployment which brings in the following phases
+Se hai un rilascio di successo dalla tua Continuous Integration, passa alla Continuous Deployment, che comporta le seguenti fasi
 
-CI Release is Success = Continuous Deployment = Deploy > Operate > Monitor
+CI Release ha avuto successo = Continuous Deployment = Deploy > Operativo > Monitoraggio
 
-You can see these three Continuous notions above as the simple collection of phases of the DevOps Lifecycle.
+Puoi vedere queste tre fasi continue sopra come una semplice collezione delle fasi del ciclo di vita del DevOps.
 
-This last bit was a bit of a recap for me on Day 3 but think this makes things clearer for me.
+Questo ultimo pezzo è stato un breve riassunto per me del Giorno 3, ma penso che mi abbia chiarito le idee.
 
-### Resources
+### Risorse
 
-- [DevOps for Developers – Software or DevOps Engineer?](https://www.youtube.com/watch?v=a0-uE3rOyeU)
-- [Techworld with Nana -DevOps Roadmap 2022 - How to become a DevOps Engineer? What is DevOps?](https://www.youtube.com/watch?v=9pZ2xmsSDdo&t=125s)
-- [How to become a DevOps Engineer in 2021 - DevOps Roadmap](https://www.youtube.com/watch?v=5pxbp6FyTfk)
+- [DevOps per Sviluppatori – Software o Ingegnere DevOps?](https://www.youtube.com/watch?v=a0-uE3rOyeU)
+- [Techworld con Nana - Mappa stradale del DevOps 2022 - Come diventare un Ingegnere DevOps? Che cos'è il DevOps?](https://www.youtube.com/watch?v=9pZ2xmsSDdo&t=125s)
+- [Come diventare un Ingegnere DevOps nel 2021 - Mappa stradale del DevOps](https://www.youtube.com/watch?v=5pxbp6FyTfk)
 
-If you made it this far then you will know if this is where you want to be or not.
+Se sei arrivato fin qui, saprai se è quello che vuoi fare o meno.
 
-See you on [Day 6](day06.md).
+Ci vediamo al [Giorno 6](day06.md).
