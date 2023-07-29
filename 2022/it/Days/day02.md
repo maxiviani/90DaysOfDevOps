@@ -31,7 +31,7 @@ A un livello molto generale, dovrai sapere come l'applicazione è configurata pe
 
 L'applicazione dovrà essere distribuita in qualche luogo, rimaniamo generici e diciamo che sarà su un server, non importa dove, ma su un server. Questo server sarà quindi utilizzato dal cliente o dall'utente finale, a seconda del tipo di applicazione creata.
 
-Questo server deve essere eseguito da qualche parte, può essere in locale, in un cloud pubblico, o anche senza server (ok, ho esagerato, non copriremo il caso senza server, ma è un'opzione e sempre più aziende si stanno dirigendo in questa direzione). Qualcuno deve creare e configurare questi server e renderli pronti per l'esecuzione dell'applicazione. Questo potrebbe essere il compito del DevOps engineer: distribuire e configurare questi server.
+Questo server deve essere eseguito da qualche parte, può essere in locale, in un cloud pubblico, o anche senza server (ok, ho esagerato, non copriremo il caso senza server, ma è un'opzione, e sempre più aziende si stanno dirigendo in questa direzione). Qualcuno deve creare e configurare questi server e renderli pronti per l'esecuzione dell'applicazione. Questo potrebbe essere il compito del DevOps engineer: distribuire e configurare questi server.
 
 Questi server eseguono un sistema operativo, e in generale si tratterà di Linux, ma dedicheremo una sezione o una settimana per coprire alcune delle conoscenze di base che dovresti acquisire in questo campo.
 

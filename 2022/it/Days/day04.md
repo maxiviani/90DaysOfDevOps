@@ -22,7 +22,7 @@ Cominciamo con le definizioni.
 
 ### Agile Development
 
-Agile è un approccio focalizzato sulla consegna di piccoli risultati più velocemente anziché rilasciare una grande iterazione del prodotto; il software è sviluppato in iterazioni. Il team rilascia una nuova versione ogni settimana o mese con aggiornamenti incrementali. L'obiettivo finale di Agile è fornire un'esperienza ottimale agli utenti finali.
+Agile è un approccio focalizzato sulla consegna di piccoli risultati più velocemente, anziché rilasciare una grande iterazione del prodotto; il software è sviluppato in iterazioni. Il team rilascia una nuova versione ogni settimana o mese con aggiornamenti incrementali. L'obiettivo finale di Agile è fornire un'esperienza ottimale agli utenti finali.
 
 ### DevOps
 
@@ -30,15 +30,15 @@ Abbiamo coperto questo argomento nei giorni scorsi in modi diversi per descriver
 
 ## Qual è la differenza tra Agile e DevOps
 
-La differenza principale sta in ciò di cui si occupano. Agile e DevOps hanno diverse prerogative, ma si aiutano a vicenda. Agile vuole iterazioni brevi, che sono possibili solo grazie all'automazione che DevOps porta. Agile vuole che il cliente provi una versione specifica e dia rapidamente feedback, il che è possibile solo se DevOps rende facile la creazione di un nuovo ambiente.
+La differenza principale sta in ciò di cui si occupano. Agile e DevOps hanno diverse prerogative, ma si aiutano a vicenda. Agile vuole iterazioni brevi, che sono possibili solo grazie all'automazione che DevOps porta con se. Agile vuole che il cliente provi una versione specifica e dia rapidamente feedback, il che è possibile solo se DevOps rende facile la creazione di un nuovo ambiente.
 
 ### Partecipanti diversi
 
-Agile si concentra sull'ottimizzazione della comunicazione tra utenti finali e sviluppatori, mentre DevOps si rivolge agli sviluppatori e ai membri del team delle operazioni. Potremmo dire che Agile è orientato verso l'esterno verso i clienti, mentre DevOps è un insieme di pratiche interne.
+Agile si concentra sull'ottimizzazione della comunicazione tra utenti finali e sviluppatori, mentre DevOps si rivolge agli sviluppatori e ai membri del team delle operazioni. Potremmo dire che Agile è orientato verso l'esterno, verso i clienti; mentre DevOps è un insieme di pratiche interne.
 
 ### Team
 
-Agile di solito si applica agli sviluppatori di software ed ai project manager. Le competenze degli ingegneri DevOps si trovano nell'intersezione tra sviluppo, QA (quality assurance) e operazioni, poiché sono coinvolti in tutte le fasi del ciclo di produzione e fanno parte del team Agile.
+Agile di solito si applica agli sviluppatori di software ed ai project manager. Le competenze degli ingegneri DevOps si trovano nell'intersezione tra sviluppo, QA (ndt: controllo qualità) e operazioni, poiché sono coinvolti in tutte le fasi del ciclo di produzione e fanno parte del team Agile.
 
 ### Framework applicati
 
@@ -46,7 +46,7 @@ Agile ha molti framework di gestione per raggiungere flessibilità e trasparenza
 
 ### Feedback
 
-In Agile la principale fonte di feedback è l'utente finale, mentre in DevOps il feedback degli stakeholder e del team stesso ha una maggiore priorità.
+In Agile la principale fonte di feedback è l'utente finale, mentre in DevOps il feedback degli stakeholder (ndt: parti interessate) e del team stesso ha una maggiore priorità.
 
 ### Aree di obiettivo
 
@@ -64,7 +64,7 @@ I rischi di DevOps derivano da una cattiva comprensione del termine e dalla manc
 
 ### Gli strumenti utilizzati
 
-Gli strumenti di Agile sono focalizzati sulla comunicazione, collaborazione, metriche e elaborazione dei feedback. Gli strumenti agili più popolari includono JIRA, Trello, Slack, Zoom, SurveyMonkey e altri.
+Gli strumenti di Agile sono focalizzati sulla comunicazione, collaborazione, metriche e elaborazione dei feedback. Gli strumenti Agile più popolari includono JIRA, Trello, Slack, Zoom, SurveyMonkey e altri.
 
 DevOps utilizza strumenti per la comunicazione del team, lo sviluppo del software, il rilascio e l'integrazione come Jenkins, GitHub Actions, BitBucket, ecc. Anche se Agile e DevOps hanno focus e ambiti leggermente diversi, i valori chiave sono quasi identici, quindi è possibile combinare i due.
 
@@ -81,9 +81,9 @@ La combinazione di Agile e DevOps porta i seguenti vantaggi:
 Agile permette di tornare alle fasi precedenti dello sviluppo del prodotto per correggere errori e prevenire l'accumulo di debiti tecnici. Per adottare simultaneamente Agile e DevOps, segui semplicemente questi 7 passi:
 
 1. Unisci i team di sviluppo e operazioni.
-2. Crea team di build e run, tutti i problemi di sviluppo e operazioni sono discussi dall'intero team DevOps.
-3. Cambia il tuo approccio agli sprint e assegna valutazioni di priorità per offrire compiti DevOps che hanno lo stesso valore dei compiti di sviluppo. Incentiva gli sviluppatori e i team delle operazioni a scambiare opinioni sul flusso di lavoro degli altri team e su eventuali problemi.
-4. Includi QA in tutte le fasi di sviluppo.
+2. Crea team di build (ndt: sviluppo) e run (ndt: operazioni), tutti i problemi di sviluppo e operazioni sono discussi dall'intero team DevOps.
+3. Cambia il tuo approccio agli sprint (ndt: periodo di tempo di breve durata, 1 o 4 settimane, in cui il team di sviluppo si impegna a sviluppare e consegnare funzionalità o correzioni di bug) e assegna valutazioni di priorità per offrire compiti DevOps che hanno lo stesso valore dei compiti di sviluppo. Incentiva gli sviluppatori e i team delle operazioni a scambiare opinioni sul flusso di lavoro degli altri team e su eventuali problemi.
+4. Includi QA (ndt: controllo qualità) in tutte le fasi di sviluppo.
 5. Scegli gli strumenti giusti.
 6. Automatizza tutto ciò che puoi.
 7. Misura e controlla utilizzando risultati numerici tangibili.

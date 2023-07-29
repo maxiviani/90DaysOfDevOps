@@ -23,11 +23,11 @@ Questo percorso di apprendimento è iniziato alcuni anni fa per me, ma all'epoca
 
 ## Iniziamo il viaggio
 
-Se leggi il blog sopra menzionato, vedrai che questo è un contenuto di alto livello per il mio viaggio di apprendimento e dirò a questo punto che non sono neanche lontanamente un esperto in nessuna di queste sezioni, ma quello che volevo fare era condividere alcune risorse sia gratuite che a pagamento perché ognuno di noi ha esigenze diverse
+Se leggi il blog sopra menzionato, vedrai che questo è un contenuto di alto livello per il mio viaggio di apprendimento e dirò a questo punto che non sono neanche lontanamente un esperto in nessuna di queste sezioni, ma quello che volevo fare era condividere alcune risorse, sia gratuite che a pagamento, perché ognuno di noi ha esigenze diverse.
 
 Nei prossimi 90 giorni, desidero documentare queste risorse e coprire quelle aree fondamentali. Mi piacerebbe coinvolgere anche la comunità. Condividi il tuo percorso e le risorse in modo che possiamo imparare pubblicamente e aiutarci a vicenda.
 
-Dal Readme d'apertura nel repository del progetto, puoi vedere che ho suddiviso gli argomenti in sezioni e ci sono 12 settimane più 6 giorni. Nei primi 6 giorni, esploreremo i fondamenti di DevOps in generale prima di approfondire alcune aree specifiche. Questo elenco non è esaustivo e, ancora una volta, mi piacerebbe che la comunità aiutasse a rendere questa risorsa utile.
+Dal [Readme](../README.md) d'apertura nel repository del progetto, puoi vedere che ho suddiviso gli argomenti in sezioni e ci sono 12 settimane più 6 giorni. Nei primi 6 giorni esploreremo i fondamenti di DevOps in generale, prima di approfondire alcune aree specifiche. Questo elenco non è esaustivo e, ancora una volta, mi piacerebbe che la comunità aiutasse a rendere questa risorsa utile.
 
 Un'altra risorsa che condivido in questo momento e che penso dovresti esaminare attentamente, magari per creare una mappa mentale per te stesso e i tuoi interessi, è la seguente:
 
@@ -41,13 +41,13 @@ Ci sono così tanti articoli di blog e video di YouTube da elencare qui, ma poic
 
 Innanzitutto, DevOps non è uno strumento. Non puoi acquistarlo, non è un prodotto software o un repository GitHub open source che puoi scaricare. Non è nemmeno un linguaggio di programmazione, né una qualche sorta di magia oscura.
 
-DevOps è un modo per fare cose più intelligenti nello sviluppo software. - Aspetta un attimo... Ma se non sono uno sviluppatore di software, dovrei smettere subito e abbandonare questo progetto??? No. Per niente. Resta... Perché DevOps unisce lo sviluppo software e la gestione dell'infrastruttura. Ho detto prima che ero più orientato verso le Virtual Machines, che rientrano generalmente nell'ambito della gestione delle infrastrutture, ma nella comunità ci sono persone con diversi background che sicuramente trarrano beneficio da DevOps individualmente: lo sviluppatore, il tecnico dell'infrastruttura e l'ingegnere di controllo qualità possono tutti imparare queste pratiche e avere una migliore comprensione di DevOps.
+DevOps è un modo per fare cose più intelligenti nello sviluppo software. - Aspetta un attimo... Ma se non sono uno sviluppatore di software, dovrei smettere subito e abbandonare questo progetto??? No. Per niente. Resta... Perché DevOps unisce lo sviluppo software e la gestione dell'infrastruttura. Ho detto prima che ero più orientato verso le Virtual Machines, che rientrano generalmente nell'ambito della gestione delle infrastrutture, ma nella comunità ci sono persone con diversi background che sicuramente trarrano beneficio da DevOps individualmente: sviluppatori, operazioni (ndt: specialista delle infrastrutture) e QA (ndt. ingegnere di controllo qualità) possono tutti imparare queste pratiche e avere una migliore comprensione di DevOps.
 
 DevOps è un insieme di pratiche che aiutano a raggiungere l'obiettivo di questa mentalità: ridurre il tempo tra la fase di ideazione di un prodotto e il suo rilascio in produzione, destinato all'utente finale o a chiunque altro abbia interesse come un team interno o un cliente.
 
 Un'altra area che approfondiremo in questa prima settimana riguarda **La metodologia Agile**. DevOps ed Agile vengono spesso adottati insieme per raggiungere la distribuzione continua delle **Applicazioni**.
 
-La conclusione principale è che una mentalità o cultura DevOps mira a ridurre il lungo processo di rilascio del software, che può richiedere anche anni, in rilasci più frequenti e ridotti. L'altro punto fondamentale da comprendere è la responsabilità di un ingegnere DevOps di abbattere le barriere tra i team che ho menzionato in precedenza: sviluppatori (Development Team), tecnici (Operations Team) e controllo qualità (Quality Assurance Team).
+La conclusione principale è che una mentalità o cultura DevOps mira a ridurre il lungo processo di rilascio del software, che può richiedere anche anni, in rilasci più frequenti e ridotti. L'altro punto fondamentale da comprendere è la responsabilità di un ingegnere DevOps di abbattere le barriere tra i team che ho menzionato in precedenza: sviluppatori (Development Team), operazioni (Operations Team) e controllo qualità (Quality Assurance Team).
 
 Da una prospettiva DevOps, **Sviluppo, Test e Distribuzione** ricadono tutti sotto il team DevOps.
 
