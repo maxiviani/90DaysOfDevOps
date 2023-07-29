@@ -1,0 +1,13 @@
+*.DS_Store
+/template_repository/
+_sidebar.md
+/2022/Days/
+/2022/es/Days/
+/2022/ja/Days/
+/2022/ko/Days/
+/2022/pl/Days/
+/2022/pt-br/Days/
+/2022/tr/Days/
+/2022/vi/Days/
+/2022/zh_cn/Days/
+/2022/zh_tw/Days/
