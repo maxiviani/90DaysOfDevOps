@@ -6,82 +6,80 @@ tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1048864
-italian_version: maxiviani
-vesrsion_date: 2023-07-29
 ---
 
-## Ottenere l'input dell'utente con Pointers e un programma completato
+## Getting user input with Pointers and a finished program
 
-Ieri ([Giorno 11](day11.md)), abbiamo creato il nostro primo programma Go che era autocontenuto e le parti per le quali volevamo ottenere l'input dell'utente sono state create come variabili all'interno del nostro codice e gli sono stati assegnati dei valori, adesso vogliamo chiedere all'utente il suo input per assegnare il valore alla variabile per il messaggio finale.
+Yesterday ([Day 11](day11.md)), we created our first Go program that was self-contained and the parts we wanted to get user input for were created as variables within our code and given values, we now want to ask the user for their input to give the variable the value for the end message.
 
-## Ottenere l'input dell'utente
+## Getting user input
 
-Prima di farlo, diamo un'occhiata di nuovo alla nostra applicazione e vediamo le variabili che vogliamo come test prima di ottenere quell'input dell'utente.
+Before we do that let's take a look at our application again and walk through the variables we want as a test before getting that user input.
 
-Ieri abbiamo concluso con il nostro codice che appariva così [day11_example4.go](Go/day11_example4.go), abbiamo definito manualmente nel codice le nostre `challenge`, `daystotal` e `dayscomplete` come variabili e costanti.
+Yesterday we finished up with our code looking like this [day11_example4.go](Go/day11_example4.go) we have manually in code defined our `challenge, daystotal, dayscomplete` variables and constants.
 
-Adesso aggiungeremo una nuova variabile chiamata `TwitterName`. Puoi trovare questo nuovo codice a [day12_example1.go](Go/day12_example1.go) e se eseguiamo questo codice, ecco il nostro output.
+Let's now add a new variable called `TwitterName` you can find this new code at [day12_example1.go](Go/day12_example1.go) and if we run this code this is our output.
 
 ![](Images/Day12_Go1.png)
 
-Siamo al giorno 12 e dovremmo cambiare il valore di `dayscomplete` ogni giorno e compilare il nostro codice ogni giorno se fosse codificato rigidamente, il che non sembra così fantastico.
+We are on day 12 and we would need to change that `dayscomplete` every day and compile our code each day if this was hardcoded which doesn't sound so great.
 
-Per ottenere l'input dell'utente, vogliamo ottenere il valore di un nome e il numero di giorni completati. Per fare ciò, possiamo utilizzare un'altra funzione all'interno del pacchetto `fmt`.
+Getting user input, we want to get the value of maybe a name and the number of days completed. For us to do this we can use another function from within the `fmt` package.
 
-Recap sul pacchetto `fmt`, diverse funzioni per input e output formattati (I/O)
+Recap on the `fmt` package, different functions for formatted input and output (I/O)
 
-- Stampare messaggi
-- Raccogliere l'input dell'utente
-- Scrivere su un file
+- Print Messages
+- Collect User Input
+- Write into a file
 
-Questo invece di assegnare il valore di una variabile, vogliamo chiedere all'utente il suo input.
+This is instead of assigning the value of a variable we want to ask the user for their input.
 
 ```
 fmt.Scan(&TwitterName)
 ```
 
-Nota che usiamo anche `&` prima della variabile. Questo è noto come puntatore, di cui parleremo nella prossima sezione.
+Notice that we also use `&` before the variable. This is known as a pointer which we will cover in the next section.
 
-Nel nostro codice [day12_example2.go](Go/day12_example2.go), puoi vedere che chiediamo all'utente di inserire due variabili, `TwitterName` e `DaysCompleted`.
+In our code [day12_example2.go](Go/day12_example2.go) you can see that we are asking the user to input two variables, `TwitterName` and `DaysCompleted`
 
-Ora eseguiamo il nostro programma e vedrai che abbiamo l'input per entrambe le variabili sopra.
+Let's now run our program and you see we have input for both of the above.
 
 ![](Images/Day12_Go2.png)
 
-Ottimo, abbiamo ottenuto l'input dall'utente e abbiamo stampato un messaggio, ma come possiamo far sì che il nostro programma ci dica quanti giorni ci restano nella nostra sfida.
+Ok, that's great we got some user input and we printed a message but what about getting our program to tell us how many days we have left in our challenge.
 
-Per fare ciò, abbiamo creato una variabile chiamata `remainingDays` e l'abbiamo valorizzata nel nostro codice con `90`. Dobbiamo quindi modificare il valore di questa variabile per stampare i giorni rimanenti quando otteniamo l'input dell'utente per `DaysCompleted`. Possiamo farlo con questa semplice modifica della variabile.
+For us to do that we have created a variable called `remainingDays` and we have hard valued this in our code as `90` we then need to change the value of this value to print out the remaining days when we get our user input of `DaysCompleted` we can do this with this simple variable change.
 
 ```
 remainingDays = remainingDays - DaysCompleted
 ```
 
-Puoi vedere come appare il nostro programma finito qui [day12_example2.go](Go/day12_example3.go).
+You can see how our finished program looks here [day12_example2.go](Go/day12_example3.go).
 
-Se ora eseguiamo questo programma, puoi vedere che viene effettuato un calcolo semplice in base all'input dell'utente e al valore di `remainingDays`.
+If we now run this program you can see that simple calculation is made based on the user input and the value of the `remainingDays`
 
 ![](Images/Day12_Go3.png)
 
-## Cosa è un puntatore? (Variabili speciali)
+## What is a pointer? (Special Variables)
 
-Un puntatore è una (speciale) variabile che punta all'indirizzo di memoria di un'altra variabile.
+A pointer is a (special) variable that points to the memory address of another variable.
 
-Una spiegazione dettagliata di questo concetto può essere trovata qui [geeksforgeeks](https://www.geeksforgeeks.org/pointers-in-golang/).
+A great explanation of this can be found here at [geeksforgeeks](https://www.geeksforgeeks.org/pointers-in-golang/)
 
-Semplifichiamo ora il nostro codice e mostriamo con e senza `&` davanti a uno dei nostri comandi di stampa, questo ci fornisce l'indirizzo di memoria del puntatore. Ho aggiunto questo esempio di codice qui [day12_example4.go](Go/day12_example4.go).
+Let's simplify our code now and show with and without the `&` in front of one of our print commands, this gives us the memory address of the pointer. I have added this code example here. [day12_example4.go](Go/day12_example4.go)
 
-Di seguito viene eseguito questo codice.
+Below is running this code.
 
 ![](Images/Day12_Go4.png)
 
-## Risorse
+## Resources
 
-- [Sondaggio StackOverflow 2021 sugli sviluppatori](https://insights.stackoverflow.com/survey/2021)
-- [Perché scegliamo Go per imparare](https://www.youtube.com/watch?v=7pLqIIAqZD4&t=9s)
-- [Jake Wright - Impara Go in 12 minuti](https://www.youtube.com/watch?v=C8LgvuEBraI&t=312s)
-- [Techworld con Nana - Corso completo di Go - 3 ore e 24 minuti](https://www.youtube.com/watch?v=yyUHQIec83I)
-- [**NON GRATUITO** Nigel Poulton Pluralsight - Fondamenti di Go - 3 ore e 26 minuti](https://www.pluralsight.com/courses/go-fundamentals)
-- [FreeCodeCamp - Impara la programmazione Go - Golang Tutorial per principianti](https://www.youtube.com/watch?v=YS4e4q9oBaU&t=1025s)
-- [Hitesh Choudhary - Playlist completa](https://www.youtube.com/playlist?list=PLRAV69dS1uWSR89FRQGZ6q9BR2b44Tr9N)
+- [StackOverflow 2021 Developer Survey](https://insights.stackoverflow.com/survey/2021)
+- [Why we are choosing Golang to learn](https://www.youtube.com/watch?v=7pLqIIAqZD4&t=9s)
+- [Jake Wright - Learn Go in 12 minutes](https://www.youtube.com/watch?v=C8LgvuEBraI&t=312s)
+- [Techworld with Nana - Golang full course - 3 hours 24 mins](https://www.youtube.com/watch?v=yyUHQIec83I)
+- [**NOT FREE** Nigel Poulton Pluralsight - Go Fundamentals - 3 hours 26 mins](https://www.pluralsight.com/courses/go-fundamentals)
+- [FreeCodeCamp - Learn Go Programming - Golang Tutorial for Beginners](https://www.youtube.com/watch?v=YS4e4q9oBaU&t=1025s)
+- [Hitesh Choudhary - Complete playlist](https://www.youtube.com/playlist?list=PLRAV69dS1uWSR89FRQGZ6q9BR2b44Tr9N)
 
-Ci vediamo al [Giorno 13](day13.md).
+See you on [Day 13](day13.md).
