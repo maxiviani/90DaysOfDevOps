@@ -6,87 +6,89 @@ tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1048701
+italian_version: maxiviani
+versin_date: 2023-07-28
 ---
 
-### The Go Workspace
+### Lo spazio di lavoro di Go
 
-On [Day 8](day08.md) we briefly covered the Go workspace to get Go up and running to get to the demo of `Hello #90DaysOfDevOps` But we should explain a little more about the Go workspace.
+Nel [Giorno 8](day08.md) abbiamo brevemente esaminato lo spazio di lavoro di Go per far funzionare Go e arrivare alla demo di `Hello #90DaysOfDevOps`. Ma dovremmo spiegare un po' meglio lo spazio di lavoro di Go.
 
-Remember we chose the defaults and we then went through and created our Go folder in the GOPATH that was already defined but in reality, this GOPATH can be changed to be wherever you want it to be.
+Ricordi che abbiamo scelto le impostazioni predefinite e poi abbiamo creato la nostra cartella Go nel GOPATH che era già definito, ma in realtà, questo GOPATH può essere modificato per essere ovunque tu voglia.
 
-If you run
+Se esegui il comando
 
 ```
 echo $GOPATH
 ```
 
-The output should be similar to mine (with a different username may be) which is:
+L'output dovrebbe essere simile al mio (con un nome utente diverso forse), che è:
 
 ```
 /home/michael/projects/go
 ```
 
-Then here, we created 3 directories. **src**, **pkg** and **bin**
+Quindi qui abbiamo creato 3 directory. **src**, **pkg** e **bin**
 
 ![](Images/Day10_Go1.png)
 
-**src** is where all of your Go programs and projects are stored. This handles namespacing package management for all your Go repositories. This is where you will see on our workstation we have our Hello folder for the Hello #90DaysOfDevOps project.
+**src** è dove vengono memorizzati tutti i tuoi programmi e progetti Go. Questo gestisce la gestione dei nomi dei pacchetti per tutti i tuoi repository Go. Qui vedrai sulla nostra postazione di lavoro la nostra cartella Hello per il progetto Hello #90DaysOfDevOps.
 
 ![](Images/Day10_Go2.png)
 
-**pkg** is where your archived files of packages that are or were installed in programs. This helps to speed up the compiling process based on if the packages being used have been modified.
+**pkg** è dove vengono archiviati i file delle librerie di pacchetti che sono stati o sono stati installati nei programmi. Questo aiuta a velocizzare il processo di compilazione in base a se i pacchetti utilizzati sono stati modificati.
 
 ![](Images/Day10_Go3.png)
 
-**bin** is where all of your compiled binaries are stored.
+**bin** è dove vengono memorizzati tutti i file binari compilati.
 
 ![](Images/Day10_Go4.png)
 
-Our Hello #90DaysOfDevOps is not a complex program so here is an example of a more complex Go Program taken from another great resource worth looking at [GoChronicles](https://gochronicles.com/)
+Il nostro Hello #90DaysOfDevOps non è un programma complesso, quindi ecco un esempio di un programma Go più complesso preso da un'altra ottima risorsa degna di essere esaminata [GoChronicles](https://gochronicles.com/)
 
 ![](Images/Day10_Go5.png)
 
-This page also goes into some great detail about why and how the layout is like this it also goes a little deeper on other folders we have not mentioned [GoChronicles](https://gochronicles.com/project-structure/)
+Questa pagina approfondisce anche alcuni dettagli interessanti su perché e come è strutturata in questo modo, e approfondisce anche altre cartelle che non abbiamo menzionato [GoChronicles](https://gochronicles.com/project-structure/)
 
-### Compiling & running code
+### Compilazione ed esecuzione del codice
 
-On [Day 9](day09.md) we also covered a brief introduction to compiling code, but we can go a little deeper here.
+Nel [Giorno 9](day09.md) abbiamo anche coperto brevemente un'introduzione alla compilazione del codice, ma possiamo approfondire un po' di più qui.
 
-To run our code we first must **compile** it. There are three ways to do this within Go.
+Per eseguire il nostro codice, prima dobbiamo **compilarlo**. Ci sono tre modi per farlo in Go.
 
 - go build
 - go install
 - go run
 
-Before we get to the above compile stage we need to take a look at what we get with the Go Installation.
+Prima di arrivare alla fase di compilazione sopra, dobbiamo dare un'occhiata a cosa otteniamo con l'installazione di Go.
 
-When we installed Go on Day 8 we installed something known as Go tools which consist of several programs that let us build and process our Go source files. One of the tools is `Go`
+Quando abbiamo installato Go il Giorno 8, abbiamo installato qualcosa chiamato strumenti Go, che consiste in diversi programmi che ci consentono di compilare e elaborare i nostri file sorgente Go. Uno degli strumenti è `Go`
 
-It is worth noting that you can install additional tools that are not in the standard Go installation.
+È utile notare che puoi installare strumenti aggiuntivi che non sono inclusi nell'installazione standard di Go.
 
-If you open your command prompt and type `go` you should see something like the image below and then you will see "Additional Help Topics" below that for now we don't need to worry about those.
+Se apri il prompt dei comandi e digiti `go`, dovresti vedere qualcosa simile all'immagine qui sotto e quindi vedrai "Additional Help Topics" sotto, ma per ora non ci preoccupiamo di quelli.
 
 ![](Images/Day10_Go6.png)
 
-You might also remember that we have already used at least two of these tools so far on Day 8.
+Potresti anche ricordare di aver già usato almeno due di questi strumenti finora il Giorno 8.
 
 ![](Images/Day10_Go7.png)
 
-The ones we want to learn more about are the build, install and run.
+Quelli di cui vogliamo imparare di più sono build, install e run.
 
 ![](Images/Day10_Go8.png)
 
-- `go run` - This command compiles and runs the main package comprised of the .go files specified on the command line. The command is compiled to a temporary folder.
-- `go build` - To compile packages and dependencies, compile the package in the current directory. If Go project contains a `main` package, it will create and place the executable in the current directory if not then it will put the executable in the `pkg` folder, and that can be imported and used by other Go programs. `go build` also enables you to build an executable file for any Go Supported OS platform.
-- `go install` - The same as go build but will place the executable in the `bin` folder.
+- `go run` - Questo comando compila ed esegue il pacchetto principale composto dai file .go specificati sulla riga di comando. Il comando viene compilato in una cartella temporanea.
+- `go build` - Per compilare pacchetti e dipendenze, compila il pacchetto nella directory corrente. Se il progetto Go contiene un pacchetto `main`, creerà e posizionerà l'eseguibile nella directory corrente; se non è così, metterà l'eseguibile nella cartella `pkg`, che può essere importata e utilizzata da altri programmi Go. `go build` ti consente anche di compilare un file eseguibile per qualsiasi piattaforma OS supportata da Go.
+- `go install` - Uguale a go build ma posizionerà l'eseguibile nella cartella `bin`.
 
-We have run through go build and go run but feel free to run through them again here if you wish, `go install` as stated above puts the executable in our bin folder.
+Abbiamo già eseguito go build e go run, ma sentiti libero di eseguirli nuovamente qui se lo desideri, `go install` come indicato sopra mette l'eseguibile nella nostra cartella bin.
 
 ![](Images/Day10_Go9.png)
 
-Hopefully, if you are following along, you are watching one of the playlists or videos below. I am taking bits of all of these and translating these into my notes so that I can understand the foundational knowledge of the Golang language. The resources below are likely going to give you a much better understanding of a lot of the areas you need overall, but I am trying to document the 7 days or 7 hours worth of the journey with interesting things that I have found.
+Spero che, se stai seguendo, tu stia guardando una delle playlist o dei video qui sotto. Sto prendendo spunti da tutti questi e li sto traducendo nelle mie note per poter comprendere le conoscenze fondamentali del linguaggio Golang. Le risorse qui sotto probabilmente ti daranno una comprensione molto migliore di molte delle aree di cui hai bisogno in generale, ma sto cercando di documentare i 7 giorni o le 7 ore del viaggio con cose interessanti che ho trovato.
 
-## Resources
+## Risorse
 
 - [StackOverflow 2021 Developer Survey](https://insights.stackoverflow.com/survey/2021)
 - [Why we are choosing Golang to learn](https://www.youtube.com/watch?v=7pLqIIAqZD4&t=9s)
@@ -96,4 +98,4 @@ Hopefully, if you are following along, you are watching one of the playlists or 
 - [FreeCodeCamp - Learn Go Programming - Golang Tutorial for Beginners](https://www.youtube.com/watch?v=YS4e4q9oBaU&t=1025s)
 - [Hitesh Choudhary - Complete playlist](https://www.youtube.com/playlist?list=PLRAV69dS1uWSR89FRQGZ6q9BR2b44Tr9N)
 
-See you on [Day 11](day11.md).
+Ci vediamo al [Giorno 11](day11.md).
