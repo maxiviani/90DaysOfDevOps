@@ -12,62 +12,66 @@ versin_date: 2023-07-28
 
 ## DevOps - Le vere storie
 
-Inizialmente, il DevOps sembrava irraggiungibile per molti di noi poiché non avevamo aziende come Netflix o una società Fortune 500 che lo praticavano, ma penso che ora stia diventando sempre più comune poiché le imprese iniziano ad adottare una pratica DevOps.
+Inizialmente, il concetto di DevOps sembrava irraggiungibile per molti di noi poiché non avevamo aziende come Netflix o una società della Fortune 500 che lo praticassero. Tuttavia, penso che ora stia diventando sempre più comune poiché molte aziende iniziano ad adottare una pratica DevOps.
 
-Come vedrai dalle seguenti referenze, ci sono molte industrie e settori diversi che utilizzano il DevOps e che hanno un enorme effetto positivo sugli obiettivi aziendali.
+Dalle storie che seguono, si può vedere che diverse industrie e settori utilizzano DevOps e ottengono un enorme impatto positivo sugli obiettivi aziendali.
 
-Il vantaggio principale qui è che, se fatto correttamente, il DevOps dovrebbe aiutare a migliorare la velocità e la qualità dello sviluppo software della tua azienda.
+Il vantaggio principale è che, se implementato correttamente, DevOps dovrebbe aiutare a migliorare la velocità e la qualità dello sviluppo software della tua azienda.
 
-Ho voluto dedicare questa giornata a esaminare aziende di successo che hanno adottato una pratica DevOps e condividere alcune risorse in proposito. Questa sarà un'ottima opportunità per la comunità di approfondire e collaborare. Hai adottato una cultura DevOps nella tua azienda? È stata una pratica di successo?
+Oggi voglio concentrarmi sulle aziende di successo che hanno adottato la pratica DevOps e condividere alcune risorse in merito. Sarà un'ottima opportunità per la comunità di approfondire e offrire aiuto. La tua azienda ha adottato una cultura DevOps? È stato un successo?
 
-Ho già menzionato Netflix sopra e tornerò a parlare di loro, poiché rappresenta un modello molto valido e abbastanza avanzato rispetto a quello che generalmente vediamo oggi, ma menzionerò anche altri grandi marchi che stanno avendo successo in questo ambito.
+Ho menzionato Netflix in precedenza e lo menzionerò di nuovo poiché rappresenta un ottimo modello che ha raggiunto livelli molto avanzati rispetto a quanto comunemente vediamo oggi. Ma parlerò anche di altri grandi marchi che stanno avendo successo con DevOps.
 
 ## Amazon
 
-Nel 2010, Amazon ha spostato la sua infrastruttura di server fisici nel cloud AWS (Amazon Web Services). Questo gli ha permesso di risparmiare risorse scalando la capacità verso l'alto e verso il basso in incrementi molto piccoli. Sappiamo anche che AWS è diventato una fonte di ricavi elevati gestendo contemporaneamente il ramo del commercio al dettaglio di Amazon.
+Nel 2010, Amazon ha spostato la sua infrastruttura di server fisici nel cloud di AWS (Amazon Web Services). Questo gli ha permesso di risparmiare risorse scalando la capacità su e giù in piccoli incrementi. Sappiamo anche che AWS è diventato una fonte di alto guadagno mentre gestiva il ramo di vendita al dettaglio di Amazon.
 
-Nel 2011, Amazon ha adottato (come indicato nel link sottostante) un processo di deployment continuo in cui i loro sviluppatori potevano distribuire il codice quando volevano e su quali server avessero bisogno. Questo ha permesso ad Amazon di rilasciare nuovi software sui server di produzione in soli 11,6 secondi in media!
+Nel 2011 (secondo il link sottostante), Amazon ha adottato un processo di deployment continuo, in cui i loro sviluppatori potevano distribuire il codice quando volevano e sui server che necessitavano. Questo ha consentito ad Amazon di distribuire nuovi software sui server di produzione con una media di 11,6 secondi!
 
 ## Netflix
 
-Chi non usa Netflix? È un servizio di streaming di alta qualità e personalmente ha una grande esperienza utente.
+Chi non usa Netflix? È un servizio di streaming di alta qualità e personalmente, offre un'ottima esperienza utente.
 
-Perché l'esperienza utente è così ottima? Beh, la capacità di fornire un servizio senza ricordarsi di problemi richiede velocità, flessibilità e attenzione alla qualità.
+Ma perché quest'esperienza utente è così eccellente? Beh, la capacità di fornire un servizio senza ricordarsi di problemi di velocità, flessibilità e attenzione alla qualità.
 
-Gli sviluppatori di Netflix possono automaticamente creare porzioni di codice in immagini web distribuibili senza dover fare affidamento sulle operazioni IT. Man mano che le immagini vengono aggiornate, vengono integrate nell'infrastruttura di Netflix utilizzando una piattaforma web personalizzata.
+I programmatori di Netflix possono automatizzare la costruzione di parti di codice in immagini web distribuibili senza dover fare affidamento sulle operazioni IT. Man mano che queste immagini vengono aggiornate, vengono integrate nell'infrastruttura di Netflix utilizzando una piattaforma web personalizzata.
 
-È presente un monitoraggio continuo in modo che, se il deployment delle immagini dovesse fallire, le nuove immagini vengano ripristinate e il traffico viene reindirizzato alla versione precedente.
+È presente un monitoraggio continuo in modo che, se la distribuzione delle immagini fallisce, le nuove immagini vengano ripristinate e il traffico viene ridirezionato alla versione precedente.
 
-Esiste una conferenza molto interessante elencata di seguito che approfondisce i DOs e i DONTs con cui Netflix vive e muore all'interno dei loro team.
+C'è una fantastica presentazione elencata di seguito che approfondisce i DOs e DONTs che Netflix vive e segue all'interno dei loro team.
 
 ## Etsy
 
-Come molte altre aziende e molte di noi, Etsy ha avuto problemi con deployment lenti e dolorosi. Allo stesso modo, potremmo aver lavorato in aziende in cui ci sono molti silos e team che non lavorano bene insieme.
+Come molte altre aziende, anche Etsy ha affrontato difficoltà legate a rilasci lenti e complicati. Allo stesso modo, potremmo anche aver avuto esperienze lavorative in aziende con molti compartimenti stagni e squadre che non lavorano bene insieme.
 
-Da quanto ho potuto capire leggendo su Amazon e Netflix, Etsy potrebbe aver adottato la pratica di consentire agli sviluppatori di distribuire il loro codice già alla fine del 2009, potrebbe essere stata addirittura prima delle altre due. (Interessante!)
+Da quanto ho capito leggendo riguardo ad Amazon e Netflix, Etsy potrebbe aver adottato il rilascio del codice da parte degli sviluppatori intorno alla fine del 2009, che potrebbe essere stato addirittura prima degli altri due. (Interessante!)
 
-Un aspetto interessante che ho letto qui è che si sono resi conto che quando gli sviluppatori si sentono responsabili del deployment, si assumono anche la responsabilità delle prestazioni dell'applicazione, del tempo di attività e di altri obiettivi.
+Una lezione interessante che ho letto è che si sono resi conto che quando gli sviluppatori si sentono responsabili del rilascio, si prendono anche la responsabilità delle prestazioni dell'applicazione, del tempo di attività e di altri obiettivi.
 
-Una cultura di apprendimento è un elemento chiave del DevOps. Anche il fallimento può essere un successo se si imparano lezioni. (Non sono sicuro da dove provenga questa citazione, ma ha un senso!)
+Una cultura di apprendimento è una parte chiave di DevOps. Anche un fallimento può essere un successo se si imparano delle lezioni. (Non sono sicuro da dove venga questa citazione, ma ha un senso!)
 
-Ho aggiunto altre storie in cui il DevOps ha cambiato il gioco in alcune di queste aziende di grande successo.
+Ho aggiunto altre storie in cui DevOps ha cambiato il gioco in alcune di queste aziende di grande successo.
 
 ## Risorse
 
-- [Come Netflix pensa al DevOps](https://www.youtube.com/watch?v=UTKIT6STSVM)
-- [16 casi d'uso popolari di DevOps e applicazioni nella vita reale [2021]](https://www.upgrad.com/blog/devops-use-cases-applications/)
+- [Come Netflix concepisce il DevOps](https://www.youtube.com/watch?v=UTKIT6STSVM)
+- [16 casi d'uso di DevOps popolari e applicazioni reali [2021]](https://www.upgrad.com/blog/devops-use-cases-applications/)
 - [DevOps: La storia di Amazon](https://www.youtube.com/watch?v=ZzLa0YEbGIY)
-- [Come Etsy fa funzionare il DevOps](https://www.networkworld.com/article/2886672/how-etsy-makes-devops-work.html)
-- [Adozione del DevOps su larga scala: lezioni apprese da Hertz, Kaiser Permanente e IBM](https://www.youtube.com/watch?v=gm18-gcgXRY)
-- [DevOps interplanetario al NASA JPL](https://www.usenix.org/conference/lisa16/technical-sessions/presentation/isla)
-- [Il CIO di Target spiega come il DevOps ha preso piede all'interno del gigante del retail](https://enterprisersproject.com/article/2017/1/target-cio-explains-how-devops-took-root-inside-retail-giant)
+- [Come Etsy rende il DevOps efficace](https://www.networkworld.com/article/2886672/how-etsy-makes-devops-work.html)
+- [Adottare DevOps su larga scala: Lezioni apprese da Hertz, Kaiser Permanente e lBM](https://www.youtube.com/watch?v=gm18-gcgXRY)
+- [DevOps Interplanetario al NASA JPL](https://www.usenix.org/conference/lisa16/technical-sessions/presentation/isla)
+- [Il CIO di Target spiega come il DevOps si è radicato all'interno del gigante del retail](https://enterprisersproject.com/article/2017/1/target-cio-explains-how-devops-took-root-inside-retail-giant)
 
-### Riassunto dei primi giorni in cui abbiamo esaminato il DevOps
+### Riassunto dei primi giorni in cui abbiamo esaminato DevOps
 
-- Il DevOps è una combinazione di Sviluppo e Operazioni che consente a un singolo team di gestire l'intero ciclo di sviluppo delle applicazioni, che comprende Sviluppo, Testing, Deployment e Operazioni.
+- DevOps è una combinazione di Sviluppo e Operazioni che permette a un singolo team di gestire l'intero ciclo di sviluppo dell'applicazione, che include Sviluppo, Test, Deployment e Operazioni.
 
-- L'obiettivo principale del DevOps è ridurre la durata del ciclo di sviluppo, fornendo funzionalità, correzioni e funzionalità frequentemente e in stretta collaborazione con gli obiettivi aziendali.
+- L'obiettivo principale di DevOps è abbreviare il ciclo di sviluppo, fornendo funzionalità, correzioni e nuove funzionalità frequentemente e in stretta collaborazione con gli obiettivi aziendali.
 
-- Il DevOps è un approccio allo sviluppo software attraverso il quale è possibile consegnare e sviluppare software in modo affidabile e rapido. Puoi trovarlo anche riferito come Sviluppo, Testing, Deployment e Monitoraggio Continui.
+- DevOps è un approccio allo sviluppo software grazie al quale il software può essere consegnato e sviluppato in modo affidabile e rapidamente. Potresti anche sentirlo chiamare Continuous Development, Testing, Deployment, Monitoring.
 
-Se sei arrivato fin qui, saprai se è quello che vuoi fare o meno. Ci vediamo al [Giorno 7](day07.md).
+Se sei arrivato fin qui, probabilmente sai se questo è ciò che vuoi o meno. Ci vediamo al [Giorno 7](day07.md).
+
+Il Giorno 7 approfondiremo un linguaggio di programmazione. Non sto cercando di diventare uno sviluppatore, ma voglio essere in grado di capire cosa fanno gli sviluppatori.
+
+Possiamo raggiungere questo obiettivo in una settimana? Probabilmente no, ma se dedichiamo 7 giorni o 7 ore per imparare qualcosa, sicuramente sapremo di più rispetto a quando abbiamo iniziato.
