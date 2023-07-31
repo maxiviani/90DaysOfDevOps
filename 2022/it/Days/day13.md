@@ -12,21 +12,21 @@ versin_date: 2023-07-28
 
 ## Twitta i tuoi progressi con la nostra nuova app
 
-Nell'ultimo giorno di esplorazione di questo linguaggio di programmazione, abbiamo appena toccato la superficie qui del linguaggio, ma è proprio all'inizio che penso dobbiamo essere interessati, eccitati e desiderosi di approfondirlo di più.
+Nell'ultimo giorno di esplorazione di questo linguaggio di programmazione, abbiamo solo scalfito la superficie del linguaggio, ma è proprio all'inizio che penso che dobbiamo interessarci ed entusiasmarci ad approfondire l'argomento.
 
-Negli ultimi giorni, abbiamo preso una piccola idea per un'applicazione e abbiamo aggiunto funzionalità ad essa, in questa sessione voglio sfruttare quei pacchetti di cui abbiamo parlato e creare la funzionalità per la nostra app, non solo per fornire un aggiornamento dei tuoi progressi sullo schermo, ma anche per inviare un tweet con i dettagli della sfida e del tuo stato.
+Negli ultimi giorni, abbiamo preso una piccola idea per un'applicazione e abbiamo aggiunto funzionalità ad essa, in questa sessione voglio sfruttare quei packages di cui abbiamo parlato e creare la funzionalità per la nostra app, non solo di fornire un aggiornamento dei tuoi progressi sullo schermo, ma anche per inviare un tweet con i dettagli della sfida e del tuo stato.
 
 ## Aggiunta della possibilità di twittare i tuoi progressi
 
-La prima cosa da fare è configurare l'accesso API dello sviluppatore con Twitter affinché funzioni.
+La prima cosa da fare è configurare l'accesso alla API di Twitter da sviluppatore affinché funzioni.
 
-Vai alla [Piattaforma sviluppatori Twitter](https://developer.twitter.com) e accedi con il tuo nome utente e i tuoi dettagli di Twitter. Una volta dentro, dovresti vedere qualcosa di simile a quanto segue, ma senza l'app che ho già creato.
+Vai alla [Piattaforma sviluppatori Twitter](https://developer.twitter.com) e accedi con il tuo account Twitter. Una volta dentro, dovresti vedere qualcosa di simile a quanto segue, ma senza l'app che ho già creato.
 
 ![](Images/Day13_Go1.png)
 
-Da qui potresti anche voler richiedere un accesso elevato, ciò potrebbe richiedere del tempo, ma è stato molto veloce per me.
+Da qui potresti anche voler richiedere un diverso tipo di account, ciò potrebbe richiedere del tempo, ma è stato molto veloce per me.
 
-Successivamente, selezioniamo Progetti e App e creiamo la nostra App. I limiti dipendono dall'accesso dell'account che hai, con "essential" hai solo un'app e un progetto, mentre con "elevated" puoi avere 3 app.
+Successivamente, selezioniamo Projects & Apps e creiamo la nostra App. I limiti dipendono dall'accesso dell'account che hai, con "free" hai solo un'app ID, mentre con "basic" puoi averne 2 e con "pro" ne avresti 3 (ndt: basic e pro sono ad abbonamento mensile).
 
 ![](Images/Day13_Go2.png)
 
@@ -38,11 +38,11 @@ Ti verranno quindi forniti questi token API, devi salvarli in un luogo sicuro. (
 
 ![](Images/Day13_Go4.png)
 
-Ora abbiamo creato la nostra app, (ho dovuto cambiare il nome dell'app poiché quello nella schermata sopra era già in uso, questi nomi devono essere univoci)
+Ora abbiamo creato la nostra app, (ho dovuto cambiare il nome dell'app poiché quello nella schermata sopra era già in uso, questi nomi devono essere univoci).
 
 ![](Images/Day13_Go5.png)
 
-Le chiavi che abbiamo raccolto prima sono note come nostre chiavi consumatore e avremo anche bisogno del nostro token e delle nostre segrete di accesso. Possiamo raccogliere queste informazioni utilizzando la scheda "Chiavi e token".
+Le chiavi che abbiamo raccolto prima sono note come nostre chiavi consumatore e avremo anche bisogno del nostro token di accesso. Possiamo raccogliere queste informazioni utilizzando la scheda "Keys & Tokens".
 
 ![](Images/Day13_Go6.png)
 
@@ -52,17 +52,17 @@ Bene, abbiamo finito nel portale sviluppatori di Twitter per ora. Assicurati di 
 
 Ricorda che il codice da cui partiamo all'interno della nostra applicazione è [day13_example1](Go/day13_example1.go), ma prima dobbiamo verificare se abbiamo il codice corretto per inviare un tweet.
 
-Dobbiamo ora pensare al codice per ottenere la nostra uscita o messaggio su Twitter sotto forma di un tweet. Utilizzeremo [go-twitter](https://github.com/dghubble/go-twitter). Si tratta di una libreria client di Go per l'API di Twitter.
+Dobbiamo ora pensare al codice per ottenere il nostra output o messaggio su Twitter sotto forma di un tweet. Utilizzeremo [go-twitter](https://github.com/dghubble/go-twitter). Si tratta di una libreria client di Go per l'API di Twitter.
 
-Per testare questo prima di inserirlo nella nostra applicazione principale, ho creato una nuova directory nella nostra cartella `src` chiamata "go-twitter-bot", ho eseguito il comando `go mod init github.com/michaelcade/go-Twitter-bot` nella cartella che ha creato un file "go.mod" e quindi possiamo iniziare a scrivere il nostro nuovo main.go e testare questo.
+Per testare questo prima di inserirlo nella nostra applicazione principale, ho creato una nuova directory nella nostra cartella `src` chiamata "go-twitter-bot", ho eseguito il comando `go mod init github.com/michaelcade/go-Twitter-bot` nella cartella che ha creato un file `go.mod` e quindi possiamo iniziare a scrivere il nostro nuovo main.go e testare questo.
 
-Ora abbiamo bisogno di quei token, chiavi e segrete che abbiamo raccolto dal portale sviluppatori di Twitter. Li imposteremo come variabili d'ambiente. Questo dipenderà dal sistema operativo che stai usando:
+Ora abbiamo bisogno di quei token, chiavi segreti che abbiamo raccolto dal portale sviluppatori di Twitter. Li imposteremo come variabili d'ambiente. Questo dipenderà dal sistema operativo che stai usando:
 
 Ho ricevuto alcune domande relative alle variabili d'ambiente, quindi ecco un post sul blog che va più in dettaglio, in modo da poter capire cosa sta accadendo: [How To Set Environment Variables](https://www.twilio.com/blog/2017/01/how-to-set-environment-variables.html)
 
 Windows
 
-```
+```zsh
 set CONSUMER_KEY
 set CONSUMER_SECRET
 set ACCESS_TOKEN
@@ -71,20 +71,20 @@ set ACCESS_TOKEN_SECRET
 
 Linux / macOS
 
-```
+```bash
 export CONSUMER_KEY
 export CONSUMER_SECRET
 export ACCESS_TOKEN
 export ACCESS_TOKEN_SECRET
 ```
 
-A questo punto, puoi dare un'occhiata a [day13_example2](Go/day13_example2.go) al codice, ma vedrai che stiamo utilizzando una struttura per definire le nostre chiavi, segreti e token.
+A questo punto, puoi dare un'occhiata a [day13_example2](Go/day13_example2.go) al codice, ma vedrai che stiamo utilizzando una struttura per definire le nostre chiavi e token segreti.
 
 Abbiamo quindi una `func` per analizzare queste credenziali e stabilire la connessione con l'API di Twitter.
 
 Successivamente, in base al successo, invieremo un tweet.
 
-```go
+```golang
 package main
 
 import (
@@ -127,15 +127,13 @@ func getClient(creds *Credentials) (*twitter.Client, error) {
     }
 
     // possiamo recuperare l'utente e verificare se le credenziali
-    // che abbiamo usato ci consentono di eff
-
-ettuare l'accesso con successo!
+    // che abbiamo usato ci consentono di eff ettuare l'accesso!
     user, _, err := client.Accounts.VerifyCredentials(verifyParams)
     if err != nil {
         return nil, err
     }
 
-    log.Printf("ACCOUNT dell'utente:\n%+v\n", user)
+    log.Printf("ACCOUNT:\n%+v\n", user)
     return client, nil
 }
 
@@ -150,11 +148,11 @@ func main() {
 
     client, err := getClient(&creds)
     if err != nil {
-        log.Println("Errore durante l'ottenimento del client di Twitter, ciò è previsto se non hai fornito i tuoi token API di Twitter")
+        log.Println("Error getting Twitter Client")
         log.Println(err)
     }
 
-    tweet, resp, err := client.Statuses.Update("Un tweet di prova dal futuro, test di un programma #90DaysOfDevOps che invia tweet, tweet tweet", nil)
+    tweet, resp, err := client.Statuses.Update("A Test Tweet from the future, testing a #90DaysOfDevOps Program that tweets, tweet tweet", nil)
     if err != nil {
         log.Println(err)
     }
@@ -171,7 +169,7 @@ Ora dobbiamo unire questi due nel nostro `main.go`. Sono sicuro che qualcuno là
 
 Puoi vedere il codice combinato [day13_example3](Go/day13_example3.go), ma lo mostrerò anche di seguito.
 
-```go
+```golang
 package main
 
 import (
@@ -214,13 +212,13 @@ func getClient(creds *Credentials) (*twitter.Client, error) {
     }
 
     // possiamo recuperare l'utente e verificare se le credenziali
-    // che abbiamo usato ci consentono di effettuare l'accesso con successo!
+    // che abbiamo usato ci consentono di effettuare l'accesso!
     user, _, err := client.Accounts.VerifyCredentials(verifyParams)
     if err != nil {
         return nil, err
     }
 
-    log.Printf("ACCOUNT dell'utente:\n%+v\n", user)
+    log.Printf("ACCOUNT:\n%+v\n", user)
     return client, nil
 }
 
@@ -237,32 +235,32 @@ func main() {
         var remainingDays uint = 90
         challenge := "#90DaysOfDevOps"
 
-        fmt.Printf("Benvenuto alla sfida %v.\nQuesta sfida dura %v giorni\n", challenge, DaysTotal)
+        fmt.Printf("Welcome to the %v challenge.\nThis challenge consists of %v days\n", challenge, DaysTotal)
 
         var TwitterName string
         var DaysCompleted uint
 
         // chiediamo l'input all'utente
-        fmt.Println("Inserisci il tuo nome utente Twitter: ")
+        fmt.Println("Enter Your Twitter Handle: ")
         fmt.Scanln(&TwitterName)
 
-        fmt.Println("Quanti giorni hai completato?: ")
+        fmt.Println("How many days have you completed?: ")
         fmt.Scanln(&DaysCompleted)
 
         // calcola i giorni rimanenti
         remainingDays = remainingDays - DaysCompleted
 
-        //fmt.Printf("Grazie %v per aver partecipato e completato %v giorni.\n", TwitterName, DaysCompleted)
-        //fmt.Printf("Ti restano %v giorni per la sfida %v\n", remainingDays, challenge)
-        // fmt.Println("Buona fortuna")
+        //fmt.Printf("Thank you %v for taking part and completing %v days.\n", TwitterName, DaysCompleted)
+        //fmt.Printf("You have %v days remaining for the %v challenge\n", remainingDays, challenge)
+        // fmt.Println("Good luck")
 
         client, err := getClient(&creds)
         if err != nil {
-            log.Println("Errore durante l'ottenimento del client di Twitter, ciò è previsto se non hai fornito i tuoi token API di Twitter")
+            log.Println("Error getting Twitter Client, this is expected if you did not supply your Twitter API tokens")
             log.Println(err)
         }
 
-        message := fmt.Sprintf("Ehi, sono %v. Ho partecipato alla sfida %v per %v giorni e mi restano %v giorni", TwitterName, challenge, DaysCompleted, remainingDays)
+        message := fmt.Sprintf("Hey I am %v I have been doing the %v for %v days and I have %v Days left", TwitterName, challenge, DaysCompleted, remainingDays)
         tweet, resp, err := client.Statuses.Update(message, nil)
         if err != nil {
             log.Println(err)
@@ -288,17 +286,15 @@ Il tweet risultante dovrebbe assomigliare a qualcosa del genere:
 
 ## Come compilare per più sistemi operativi
 
-Ora voglio coprire la domanda: "Come compilare per più sistemi operativi?" La cosa fantastica di Go è che può essere compilato facilmente per molti sistemi operativi diversi. Puoi ottenere una lista completa eseguendo il comando seguente:
+Ora voglio rispondere alla domanda: "Come compilare per più sistemi operativi?" La cosa fantastica di Go è che può compilare facilmente per molti sistemi operativi diversi. Puoi ottenere una lista completa eseguendo il comando seguente:
 
-```
+```bash
 go tool dist list
 ```
 
-Finora, l'utilizzo
+Finora, l'utilizzo dei nostri comandi `go build` è ottimo e utilizzerà le variabili d'ambiente `GOOS` e `GOARCH` per determinare la macchina host e per quale sistema operativo deve essere compilato. Ma possiamo anche creare altre build utilizzando il codice seguente come esempio.
 
- dei nostri comandi `go build` è ottimo e utilizzerà le variabili d'ambiente `GOOS` e `GOARCH` per determinare la macchina host e per quale sistema operativo deve essere compilato. Ma possiamo anche creare altre build utilizzando il codice seguente come esempio.
-
-```
+```bash
 GOARCH=amd64 GOOS=darwin go build -o ${BINARY_NAME}_0.1_darwin main.go
 GOARCH=amd64 GOOS=linux go build -o ${BINARY_NAME}_0.1_linux main.go
 GOARCH=amd64 GOOS=windows go build -o ${BINARY_NAME}_0.1_windows main.go
@@ -306,7 +302,7 @@ GOARCH=arm64 GOOS=linux go build -o ${BINARY_NAME}_0.1_linux_arm64 main.go
 GOARCH=arm64 GOOS=darwin go build -o ${BINARY_NAME}_0.1_darwin_arm64 main.go
 ```
 
-Questo ti darà poi le build nella tua directory per tutte le piattaforme sopra indicate. Puoi quindi prendere tutto ciò e creare un makefile per compilare queste build ogni volta che aggiungi nuove funzionalità al tuo codice. Ho incluso il [makefile](Go/makefile).
+Questo ti darà poi le build nella tua directory per tutte le piattaforme sopra indicate. Puoi quindi prendere tutto ciò e creare un makefile per compilare queste build ogni volta che aggiungi nuove funzionalità al tuo codice. Qui ho anche incluso il [makefile](Go/makefile).
 
 Questo è ciò che ho usato per creare le release che ora puoi vedere nel [repository](https://github.com/MichaelCade/90DaysOfDevOps/releases).
 

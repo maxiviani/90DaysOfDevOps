@@ -12,19 +12,19 @@ versin_date: 2023-07-28
 
 ## Configurazione dell'ambiente DevOps per Go e Hello World
 
-Prima di approfondire alcuni fondamenti di Go, dovremmo installare Go sulla nostra postazione di lavoro e fare ciò che insegna ogni modulo "imparare a programmare 101", ovvero creare l'app Hello World. Poiché questa parte illustrerà i passaggi per installare Go sulla tua postazione di lavoro, cercheremo di documentare il processo con delle immagini in modo che tutti possano seguire facilmente.
+Prima di approfondire alcuni fondamenti di Go, dovremmo installare Go sulla nostra postazione di lavoro e fare ciò che insegna ogni tutorial che insegna a programmare, ovvero creare l'app Hello World. Poiché questa parte illustrerà i passaggi per installare Go sulla tua postazione di lavoro, cercheremo di documentare il processo con delle immagini in modo che tutti possano seguire facilmente.
 
-Innanzitutto, dirigiamoci su [go.dev/dl](https://go.dev/dl/) e troverai alcune opzioni disponibili per il download.
+Innanzitutto, dirigiamoci su [go.dev/dl](https://go.dev/dl/) dove troverai alcune opzioni disponibili per il download.
 
 ![Opzioni di download](Images/Day8_Go1.png)
 
-Se sei arrivato fin qui, probabilmente sai quale sistema operativo della postazione di lavoro stai utilizzando, quindi seleziona il download appropriato e poi procedi con l'installazione. In questo esempio, userò Windows e, in sostanza, dalla schermata successiva, possiamo lasciare tutte le impostazioni predefinite per il momento. **_(Tieni presente che al momento della scrittura, questa era l'ultima versione, quindi gli screenshot potrebbero essere obsoleti)_**
+Se sei arrivato fin qui, probabilmente sai quale sistema operativo della postazione di lavoro stai utilizzando, quindi seleziona il download appropriato e poi procedi con l'installazione. Per questa guida sto usando Windows; in pratica, da questa schermata successiva, possiamo lasciare tutte le impostazioni predefinite per il momento. **_(Tieni presente che al momento della scrittura, questa era l'ultima versione, quindi gli screenshot potrebbero essere obsoleti)_**
 
 ![Impostazioni di installazione Go](Images/Day8_Go2.png)
 
-Nota anche che, se hai già una versione precedente di Go installata, dovrai rimuoverla prima di procedere con l'installazione. Windows ha questa opzione integrata nell'installer e rimuoverà la versione precedente e installerà quella nuova.
+Nota anche che, se hai già una versione precedente di Go installata, dovrai rimuoverla prima di procedere con l'installazione. Windows ha questa opzione integrata nell'installer pertanto rimuoverà la versione precedente e installerà quella nuova.
 
-Una volta completata l'installazione, apri un prompt dei comandi/terminale e verifichiamo se Go è stato installato. Se otterrai l'output che vediamo di seguito, allora Go è installato correttamente, altrimenti dovrai rivedere i passaggi fatti.
+Una volta completata l'installazione, apri un prompt dei comandi, o il terminale, e verifichiamo se Go è stato installato. Se otterrai l'output che vediamo di seguito, allora Go è installato correttamente, altrimenti dovrai rifare i passaggi descritti.
 
 Esegui il seguente comando:
 
@@ -42,31 +42,29 @@ Hai controllato? Sei con noi? Probabilmente otterrai qualcosa di simile a quanto
 
 ![Directory mancante](Images/Day8_Go5.png)
 
-Va bene, creiamo quella directory per comodità. Userò il comando `mkdir` nel mio terminale PowerShell. Inoltre, dobbiamo creare altre 3 cartelle all'interno della cartella Go, come vedrai nel passaggio successivo.
+Va bene, creiamo quella directory: per comodità userò il comando `mkdir` nel mio terminale PowerShell. Inoltre, dobbiamo creare altre 3 cartelle all'interno della cartella Go, come vedrai nel passaggio successivo.
 
 ![Creazione delle directory](Images/Day8_Go6.png)
 
-Ora abbiamo Go installato e la nostra directory di lavoro Go pronta per l'azione. Ora abbiamo bisogno di un ambiente di sviluppo integrato (IDE). Ce ne sono molti disponibili, ma il più comune e quello che useremo è Visual Studio Code o Code. Puoi saperne di più sugli IDE [qui](https://www.youtube.com/watch?v=vUn5akOlFXQ).
+Ora abbiamo Go installato e la nostra directory di lavoro Go pronta. Abbiamo anche bisogno di un ambiente di sviluppo integrato (IDE). Ce ne sono molti disponibili, ma il più comune e quello che useremo è Visual Studio Code o Code. Puoi saperne di più sugli IDE [qui](https://www.youtube.com/watch?v=vUn5akOlFXQ).
 
-Se non hai ancora scaricato e installato VSCode sulla tua postazione di lavoro, puoi farlo dirigendoti [qui](https://code.visualstudio.com/download). Come puoi vedere di seguito, hai diverse opzioni per sistemi operativi.
+Se non hai ancora scaricato e installato VSCode sulla tua postazione di lavoro, puoi farlo da [qui](https://code.visualstudio.com/download). Come puoi vedere di seguito, hai diverse opzioni per sistemi operativi.
 
 ![Opzioni di download per VSCode](Images/Day8_Go7.png)
 
-Come per l'installazione di Go, scarica e installa VSCode mantenendo le impostazioni predefinite. Una volta completata l'installazione, apri VSCode e seleziona "Apri file" e naviga nella nostra cartella Go creata in precedenza.
+Come per l'installazione di Go, scarica e installa VSCode mantenendo le impostazioni predefinite. Una volta completata l'installazione, apri VSCode e seleziona "Apri file" e naviga fino alla nostra directory Go creata in precedenza.
 
 ![Apertura di VSCode](Images/Day8_Go8.png)
 
-Potresti ricevere una notifica di fiducia, leggila se vuoi e poi clicca su "Sì, fidati degli autori." (Ma ti preghiamo di non aprire cose di cui non ti fidi in futuro!)
+Potresti ricevere un warning sull'attendibilità della directory, leggila se vuoi e poi clicca su "Sì, mi fido degli autori." (Ma in futuro non aprire file o directory di cui non ti fidi!)
 
-Ora dovresti vedere anche le tre cartelle create in precedenza e vogliamo fare clic destro sulla cartella "src" e creare una nuova cartella chiamata "Hello".
+Ora dovresti vedere anche le tre cartelle create in precedenza, facciamo clic destro sulla cartella "src" per creare una nuova cartella chiamata `Hello`.
 
 ![Creazione della cartella Hello](Images/Day8_Go9.png)
 
-Fino a questo punto, direi che è stato tutto abbastanza facile, no? Adesso creeremo il nostro primo programma Go senza comprenderne nulla.
+Fino a questo punto, direi che è stato tutto abbastanza facile, no? Adesso creeremo il nostro primo programma Go senza comprendere nulla di ciò che abbiamo messo nella prossima fase.
 
-Quindi, crea un file chiamato "main.go" nella cartella "Hello". Appena premi Invio su "main.go", ti verrà chiesto se desideri installare l'estensione di Go e anche i pacchetti. Puoi anche controllare
-
- il file pkg vuoto che abbiamo creato qualche passaggio indietro e noterai che ora ci sono nuovi pacchetti al suo interno.
+Quindi, crea un file chiamato `main.go` nella cartella `Hello`. Appena premi Invio su "main.go", ti verrà chiesto se desideri installare l'estensione di Go e anche i pacchetti. Puoi anche controllare il file pkg vuoto che abbiamo creato qualche passaggio indietro e noterai che ora ci sono nuovi pacchetti al suo interno.
 
 ![Installazione estensione Go](Images/Day8_Go10.png)
 

@@ -22,19 +22,19 @@ In questa sezione, approfondiremo il codice e comprenderemo meglio alcuni aspett
 
 Prima di esaminare le [6 righe del codice Hello World](Go/hello.go), dobbiamo capire cosa significa compilare.
 
-I linguaggi di programmazione che utilizziamo comunemente, come Python, Java, Go e C++, sono linguaggi di alto livello. Ciò significa che sono leggibili dagli esseri umani, ma quando una macchina cerca di eseguire un programma, deve essere in una forma comprensibile dalla macchina stessa. Dobbiamo tradurre il nostro codice leggibile dall'uomo in codice macchina, che viene chiamato compilazione.
+I linguaggi di programmazione che utilizziamo comunemente, come Python, Java, Go e C++, sono linguaggi di alto livello. Ciò significa che sono leggibili dagli esseri umani, ma quando una macchina cerca di eseguire un programma, deve essere in una forma comprensibile dalla macchina stessa. Dobbiamo tradurre il nostro codice leggibile dall'uomo in codice macchina, questo processo viene chiamato compilazione.
 
 ![](Images/Day9_Go1.png)
 
 Dall'immagine sopra, puoi vedere cosa abbiamo fatto nel [Giorno 8](day08.md): abbiamo creato un semplice main.go di Hello World e poi abbiamo utilizzato il comando `go build main.go` per compilare il nostro eseguibile.
 
-### Cosa sono i pacchetti?
+### Cosa sono i packages?
 
-Un pacchetto è una raccolta di file sorgente nella stessa directory che vengono compilati insieme. Possiamo semplificarlo ulteriormente: un pacchetto è un gruppo di file .go nella stessa cartella. Ricorda la nostra cartella "Hello" dal Giorno 8? Quando lavorerai su programmi Go più complessi, potresti avere cartella1, cartella2 e cartella3 che contengono diversi file .go che compongono il tuo programma, con più pacchetti.
+Un package è una raccolta di files sorgente nella stessa directory che vengono compilati insieme. Possiamo semplificarlo ulteriormente: un package è un gruppo di file .go nella stessa directory. Ricordi la nostra cartella "Hello" del Giorno 8? Quando lavorerai su programmi Go più complessi, potresti avere cartella1, cartella2 e cartella3 che contengono diversi file .go che compongono il tuo programma, con più packages.
 
-Usiamo i pacchetti per riutilizzare il codice di altre persone, quindi non dobbiamo scrivere tutto da zero. Ad esempio, se desideriamo una calcolatrice come parte del nostro programma, potremmo trovare un pacchetto Go esistente che contiene le funzioni matematiche da importare nel nostro codice, risparmiandoci molto tempo e sforzo a lungo termine.
+Usiamo i packages per riutilizzare il codice di altre persone, quindi non dobbiamo scrivere tutto da zero. Ad esempio, se desideriamo una calcolatrice come parte del nostro programma, potremmo trovare un package Go esistente che contiene le funzioni matematiche da importare nel nostro codice, risparmiandoci molto tempo e sforzo a lungo termine.
 
-Go ti incoraggia ad organizzare il tuo codice in pacchetti in modo che sia facile riutilizzarlo e mantenere il codice sorgente.
+Go ti incoraggia ad organizzare il tuo codice in packages in modo che sia facile riutilizzarli e manutenere il codice sorgente.
 
 ### Hello #90DaysOfDevOps, riga per riga
 
@@ -42,33 +42,33 @@ Ora diamo un'occhiata al nostro file main.go di Hello #90DaysOfDevOps e analizzi
 
 ![](Images/Day9_Go2.png)
 
-Nella prima riga, hai `package main`, il che significa che questo file appartiene a un pacchetto chiamato "main". Tutti i file .go devono appartenere a un pacchetto e dovrebbero anche avere `package qualcosa` nella riga di apertura.
+Nella prima riga, hai `package main`, il che significa che questo file appartiene a un pacchetto chiamato "main". Tutti i file .go devono appartenere a un package e dovrebbero anche avere `package qualcosa` nella riga di apertura.
 
-Un pacchetto può essere chiamato come preferisci. Dobbiamo chiamarlo "main" poiché questo è il punto di avvio del programma che si troverà in questo pacchetto, ed è una regola (devo capire meglio questa regola?).
+Un package può essere chiamato come preferisci. Questo dobbiamo chiamarlo "main" poiché è il punto di avvio del programma che si troverà in questo package, ed è una regola (Ho bisogno di capire di più su questa regola?).
 
 ![](Images/Day9_Go3.png)
 
 Ogni volta che vogliamo compilare ed eseguire il nostro codice, dobbiamo dire alla macchina da dove iniziare l'esecuzione. Lo facciamo scrivendo una funzione chiamata "main". La macchina cercherà una funzione chiamata "main" per trovare il punto di ingresso del programma.
 
-Una funzione è un blocco di codice che può svolgere un compito specifico e può essere utilizzato in tutto il programma.
+Una funzione è un blocco di codice che può svolgere un compito specifico e che può essere utilizzato in tutto il programma.
 
-Puoi dichiarare una funzione con qualsiasi nome usando `func`, ma in questo caso dobbiamo chiamarla "main" poiché questo è il punto di inizio del codice.
+Puoi dichiarare una funzione con qualsiasi nome usando `func`, ma in questo caso dobbiamo chiamarla `main` poiché questo è il punto di inizio del codice.
 
 ![](Images/Day9_Go4.png)
 
-Ora passeremo alla riga 3 del nostro codice, l'import. Questo significa che vogliamo includere un altro pacchetto nel nostro programma principale. "fmt" è un pacchetto standard utilizzato qui e fornito da Go, questo pacchetto contiene la funzione `Println()` e, poiché l'abbiamo importato, possiamo utilizzarla nella riga 6. Ci sono diversi pacchetti standard che puoi includere nel tuo programma e che puoi sfruttare o riutilizzare nel tuo codice, risparmiandoti il fastidio di dover scrivere tutto da zero. [Libreria standard di Go](https://pkg.go.dev/std)
+Ora passeremo alla riga 3 del nostro codice, l'import. Questo significa che vogliamo includere un altro package nel nostro programma principale. Il package "fmt" utilizzato è un package standard ed è fornito da Go, questo package contiene la funzione `Println()` e, poiché l'abbiamo importato, possiamo utilizzarla nella riga 6. Ci sono diversi packages standard che puoi includere nel tuo programma e che puoi sfruttare o riutilizzare nel tuo codice, risparmiandoti il fastidio di dover scrivere tutto da zero. [Libreria standard di Go](https://pkg.go.dev/std)
 
 ![](Images/Day9_Go5.png)
 
-La funzione `Println()` che abbiamo qui è un modo per scrivere l'output standard sul terminale ovunque l'eseguibile sia stato eseguito con successo. Sentiti libero di cambiare il messaggio all'interno delle parentesi ().
+La funzione `Println()` che abbiamo usato è un modo per scrivere l'output standard sul terminale ovunque l'eseguibile sia stato eseguito con successo. Sentiti libero di cambiare il messaggio all'interno delle parentesi ().
 
 ![](Images/Day9_Go6.png)
 
 ### In breve
 
-- **Riga 1** = Questo file sarà nel pacchetto chiamato "main" e deve essere chiamato "main" poiché include il punto di ingresso del programma.
-- **Riga 3** = Per usare `Println()` dobbiamo importare il pacchetto "fmt" per poterlo utilizzare nella riga 6.
-- **Riga 5** = Il vero punto di inizio è la funzione "main".
+- **Riga 1** = Questo file sarà nel pacchetto chiamato `main` e deve essere chiamato `main` poiché include il punto di ingresso del programma.
+- **Riga 3** = Per utilizzare `Println()` nella riga 6, dobbiamo importare il package "fmt".
+- **Riga 5** = Il vero punto di inizio è la funzione `main`.
 - **Riga 6** = Ciò ci permetterà di stampare "Hello #90DaysOfDevOps" sul nostro sistema.
 
 ## Risorse

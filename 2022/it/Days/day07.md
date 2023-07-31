@@ -20,23 +20,21 @@ Per avere successo in DevOps, devi avere una buona conoscenza delle competenze d
 
 ## Capire perché è necessario imparare un linguaggio di programmazione
 
-Il motivo per cui Python e Go vengono raccomandati così spesso per gli ingegneri DevOps è che molti degli strumenti DevOps sono scritti in Python o Go, il che ha senso se stai costruendo strumenti DevOps. Questo è importante perché determinerà davvero cosa dovresti imparare e quale sarebbe probabilmente il più vantaggioso. Se prevedi di costruire strumenti DevOps o ti stai unendo a un team che lo fa, avrebbe senso imparare quel linguaggio. Se prevedi di essere fortemente coinvolto in Kubernetes o nei contenitori, è molto probabile che tu scelga Go come linguaggio di programmazione. Per esempio, l'azienda per cui lavoro (Kasten by Veeam) si trova nell'ecosistema Cloud-Native con focus sulla gestione dei dati per Kubernetes e tutto è scritto in Go.
+Il motivo per cui Python e Go vengono raccomandati così spesso per gli ingegneri DevOps è che molti degli strumenti DevOps sono scritti in Python o Go, il che ha senso se stai costruendo strumenti DevOps. Questo è importante perché determinerà davvero cosa dovresti imparare e quale sarebbe probabilmente il più vantaggioso. Se prevedi di costruire strumenti DevOps o ti stai unendo a un team che lo fa, avrebbe senso imparare lo stesso linguaggio. Se prevedi di essere fortemente coinvolto in Kubernetes o nei contaners, è molto probabile che tu scelga Go come linguaggio di programmazione. Per esempio, l'azienda per cui lavoro (Kasten by Veeam) si trova nell'ecosistema Cloud-Native con focus sulla gestione dei dati per Kubernetes e tutto è scritto in Go.
 
-Ma potresti non avere ragionamenti così chiari per fare una scelta, potresti essere uno studente o stai cambiando carriera senza una decisione definita per te. In questa situazione, penso che tu debba scegliere quello che sembra più adatto alle applicazioni con cui desideri lavorare.
+Ma potresti non avere le idee così chiare per fare una scelta, potresti essere uno studente o stai cambiando carriera senza aver fatto una scelta precisa. In questa situazione, penso che tu debba scegliere quello che sembra più adatto alle applicazioni con cui desideri lavorare.
 
 Ricorda, non sto cercando di diventare uno sviluppatore di software, voglio solo capire un po' di più sul linguaggio di programmazione in modo da poter leggere e capire cosa fanno questi strumenti e da lì potremmo vedere come possiamo contribuire al miglioramento delle cose.
 
 È anche importante sapere come interagire con questi strumenti DevOps, che potrebbero essere Kasten K10 o potrebbe essere Terraform e HCL. Questi sono ciò che chiameremo file di configurazione e così interagisci con gli strumenti DevOps per realizzare le cose, comunemente si tratta di file YAML. (Potremmo dedicare l'ultimo giorno di questa sezione per approfondire un po' su YAML)
 
-## Mi sono appena sconsigliato di imparare un linguaggio di programmazione?
+## Mi sono appena convinto a non imparare un linguaggio di programmazione?
 
 Nella maggior parte dei casi, o a seconda del ruolo, aiuterai i team di ingegneria a implementare DevOps nel loro flusso di lavoro, gran parte del tempo sarà dedicata al testing dell'applicazione e all'assicurarsi che il flusso di lavoro costruito sia in linea con i principi di DevOps che abbiamo menzionato nei primi giorni. Ma nella realtà, gran parte del tempo sarà dedicata alla risoluzione di problemi legati alle prestazioni dell'applicazione o a qualcosa del genere. Questo mi riporta al mio punto originale e alla ragione per cui dobbiamo conoscere il linguaggio di programmazione: dobbiamo conoscere il linguaggio in cui è scritto il codice. Se l'applicazione è scritta in NodeJS, non sarà di grande aiuto avere una competenza in Go o Python.
 
 ## Perché Go
 
-Perché Golang è il prossimo linguaggio di programmazione per DevOps? Go è diventato un linguaggio di programmazione molto popolare
-
- negli ultimi anni. Secondo l'indagine StackOverflow per il 2021, Go è arrivato al quarto posto per i linguaggi di programmazione, scripting e markup più desiderati, con Python al primo posto, ma ascoltami. [Indagine sviluppatori StackOverflow 2021 - Link sui più desiderati](https://insights.stackoverflow.com/survey/2021#section-most-loved-dreaded-and-wanted-programming-scripting-and-markup-languages)
+Perché Golang è il prossimo linguaggio di programmazione per DevOps? Go è diventato un linguaggio di programmazione molto popolare negli ultimi anni. Secondo l'indagine di StackOverflow per il 2021, Go è arrivato al quarto posto per i linguaggi di programmazione, scripting e markup più desiderati, con Python al primo posto, ma ascoltami. [Indagine sviluppatori StackOverflow 2021 - Link sui più desiderati](https://insights.stackoverflow.com/survey/2021#section-most-loved-dreaded-and-wanted-programming-scripting-and-markup-languages)
 
 Come ho già detto, alcuni dei più noti strumenti e piattaforme DevOps sono scritti in Go, come Kubernetes, Docker, Grafana e Prometheus.
 
@@ -44,21 +42,21 @@ Quali sono alcune caratteristiche di Go che lo rendono ottimo per DevOps?
 
 ## Compilazione e distribuzione dei programmi Go
 
-Un vantaggio nell'usare un linguaggio come Python, interpretato, in un ruolo DevOps è che non devi compilare un programma Python prima di eseguirlo. Soprattutto per compiti di automazione più piccoli, non vuoi essere rallentato da un processo di compilazione che richiede una compilazione, anche se Go è un linguaggio di programmazione compilato, **Go viene compilato direttamente in codice macchina**. Go è noto anche per i tempi di compilazione veloci.
+Un vantaggio nell'usare un linguaggio come Python, interpretato, in un ruolo DevOps è che non devi compilare un programma prima di eseguirlo. Soprattutto per compiti di automazione più piccoli, non vuoi essere rallentato da un processo che richiede una compilazione, anche se Go è un linguaggio di programmazione compilato, **Go viene compilato direttamente in codice macchina**. Go è noto anche per i tempi di compilazione veloci.
 
 ## Go vs Python per DevOps
 
-I programmi Go sono collegati staticamente, il che significa che quando compili un programma Go, tutto è incluso in un singolo file eseguibile binario e non saranno necessarie dipendenze esterne che dovrebbero essere installate sulla macchina remota. Ciò rende il rilascio dei programmi Go semplice, a differenza dei programmi Python che utilizzano librerie esterne, dove devi assicurarti che tutte quelle librerie siano installate sulla macchina remota su cui desideri eseguirle.
+I programmi Go sono linkati staticamente, il che significa che quando compili un programma Go, tutto è incluso in un singolo file eseguibile binario e non saranno necessarie dipendenze esterne che dovrebbero essere installate sulla macchina remota. Ciò rende il rilascio dei programmi Go semplice, a differenza dei programmi Python che utilizzano librerie esterne, dove devi assicurarti che tutte quelle librerie siano installate sulla macchina remota su cui desideri eseguire il programma.
 
-Go è un linguaggio indipendente dalla piattaforma, il che significa che puoi produrre eseguibili binari per \* tutti i sistemi operativi, Linux, Windows, macOS, ecc. ed è molto facile farlo. Con Python, non è così semplice creare questi eseguibili binari per determinati sistemi operativi.
+Go è un linguaggio indipendente dalla piattaforma, il che significa che puoi produrre eseguibili binari per tutti i sistemi operativi, Linux, Windows, macOS, ecc. ed è molto facile farlo. Con Python, per determinati sistemi operativi, non è così semplice creare eseguibili binari.
 
-Go è un linguaggio molto performante, ha tempi di compilazione veloci e un tempo di esecuzione rapido, con un utilizzo ridotto delle risorse come CPU e memoria, soprattutto rispetto a Python. Sono stati implementati numerosi miglioramenti nel linguaggio Go che lo rendono così performante. (Risorse indicate sotto)
+Go è un linguaggio molto performante, ha tempi di compilazione veloci e un tempo di esecuzione rapido, con un utilizzo ridotto delle risorse come CPU e memoria, soprattutto rispetto a Python. Sono stati implementati numerosi miglioramenti nel linguaggio Go che lo rendono così performante. (Vedi le risorse indicate)
 
 A differenza di Python, che spesso richiede l'uso di librerie di terze parti per implementare un determinato programma, Go include una libreria standard che offre la maggior parte delle funzionalità necessarie per DevOps direttamente integrata. Ciò include funzionalità di elaborazione dei file, servizi web HTTP, elaborazione JSON, supporto nativo per la concorrenza e il parallelismo, nonché test integrati.
 
-Non sto assolutamente criticando Python, sto solo esponendo le mie ragioni per scegliere Go, ma non voglio fare un confronto Go vs Python, è solo perché ha senso per l'azienda per cui lavoro che sviluppa software in Go.
+Non sto assolutamente criticando Python, sto solo esponendo le mie ragioni per scegliere Go, e non sono quelle del confronto Go vs Python di cui sopra ma è, in generale, perché ha senso dato che l'azienda per cui lavoro sviluppa software in Go. Ecco perché.
 
-Posso dire che una volta imparato il tuo primo linguaggio di programmazione, o almeno mi è stato detto poiché non sono moltissime pagine in questa parte al momento, sarà più facile affrontare altri linguaggi. Probabilmente non avrai mai un lavoro in un'azienda dove non dovrai occuparti di gestire, progettare, orchestrare e risolvere problemi delle applicazioni JavaScript e Node JS.
+Posso dire che, o almeno mi è stato detto poiché non sono moltissime le pagine in questa parte al momento, una volta imparato il tuo primo linguaggio di programmazione sarà più facile affrontare altri linguaggi. Probabilmente non avrai mai un lavoro in un'azienda dove non dovrai occuparti di gestire, progettare, orchestrare e risolvere problemi delle applicazioni JavaScript e Node JS.
 
 ## Risorse
 
