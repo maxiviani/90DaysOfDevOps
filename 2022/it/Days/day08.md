@@ -12,7 +12,7 @@ versin_date: 2023-07-28
 
 ## Configurazione dell'ambiente DevOps per Go e Hello World
 
-Prima di approfondire alcuni fondamenti di Go, dovremmo installare Go sulla nostra postazione di lavoro e fare ciò che insegna ogni tutorial che insegna a programmare, ovvero creare l'app Hello World. Poiché questa parte illustrerà i passaggi per installare Go sulla tua postazione di lavoro, cercheremo di documentare il processo con delle immagini in modo che tutti possano seguire facilmente.
+Prima di approfondire alcuni fondamenti di Go, dovremmo installare Go sulla nostra postazione di lavoro e fare ciò che prevede ogni tutorial che insegna a programmare, ovvero creare l'app Hello World. Poiché questa parte illustrerà i passaggi per installare Go sulla tua postazione di lavoro, cercheremo di documentare il processo con delle immagini in modo che tutti possano seguire facilmente.
 
 Innanzitutto, dirigiamoci su [go.dev/dl](https://go.dev/dl/) dove troverai alcune opzioni disponibili per il download.
 
