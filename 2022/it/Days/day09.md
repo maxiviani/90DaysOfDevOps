@@ -7,7 +7,7 @@ cover_image: null
 canonical_url: null
 id: 1099682
 italian_version: maxiviani
-versin_date: 2023-07-28
+translate_date: 2023-07-28
 ---
 
 ## Spieghiamo il codice Hello World

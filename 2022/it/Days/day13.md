@@ -7,7 +7,7 @@ cover_image: null
 canonical_url: null
 id: 1048865
 italian_version: maxiviani
-versin_date: 2023-07-28
+translate_date: 2023-07-28
 ---
 
 ## Twitta i tuoi progressi con la nostra nuova app

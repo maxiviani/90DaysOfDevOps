@@ -7,7 +7,7 @@ cover_image: null
 canonical_url: null
 id: 1048830
 italian_version: maxiviani
-version_date: 2023-07-28
+translate_date: 2023-07-28
 ---
 
 ## Plan > Code > Build > Testing > Release > Deploy > Operate > Monitor > (Pianificazione > Sviluppo > Build > Test > Rilascio > Distribuzione > Operatività > Monitoraggio)

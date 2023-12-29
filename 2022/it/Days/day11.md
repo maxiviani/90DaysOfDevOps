@@ -7,7 +7,7 @@ cover_image: null
 canonical_url: null
 id: 1048862
 italian_version: maxiviani
-versin_date: 2023-07-28
+translate_date: 2023-07-28
 ---
 
 Prima di iniziare con gli argomenti di oggi, vorrei fare un enorme ringraziamento a [Techworld with Nana](https://www.youtube.com/watch?v=yyUHQIec83I) per questo fantastico e conciso viaggio  attraverso i fondamenti di Go.

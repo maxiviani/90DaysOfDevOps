@@ -7,7 +7,7 @@ cover_image: null
 canonical_url: null
 id: 1048864
 italian_version: maxiviani
-versin_date: 2023-07-28
+translate_date: 2023-07-28
 ---
 
 ## Ottenere l'input dell'utente con i puntatori e un programma completo

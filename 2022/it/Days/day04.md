@@ -7,7 +7,7 @@ cover_image: null
 canonical_url: null
 id: 1048700
 italian_version: maxiviani
-version_date: 2023_07-27
+translate_date: 2023_07-27
 ---
 
 ## DevOps & Agile
